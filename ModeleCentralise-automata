@@ -1,0 +1,14 @@
+digraph init {
+size="8,10";
+  GT [shape=box,style=dotted,label="init"];
+  GT -> S5;
+	S5 -> S30  [color=black,style=dotted,label="D_STEP9"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP18"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP20"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP24"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP26"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP31"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP33"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP37"];
+	S30 -> S30  [color=black,style=dotted,label="D_STEP39"];
+}

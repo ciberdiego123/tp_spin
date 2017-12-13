@@ -1,0 +1,118 @@
+"gcc-4" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"gcc-3" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+  0:	proc  - (:root:) creates proc  0 (:init:)
+spin: ModeleCentralise.pml:0, warning, global, 'int   NT' variable is never used (other than in print stmnts)
+  1:	proc  0 (:init::1) ModeleCentralise.pml:10 (state 1)	[posR1 = est]
+		posR1 = est
+  2:	proc  0 (:init::1) ModeleCentralise.pml:11 (state 2)	[posR2 = ouest]
+		posR2 = ouest
+  3:	proc  0 (:init::1) ModeleCentralise.pml:12 (state 3)	[stationR1 = 1]
+		stationR1 = 1
+  4:	proc  0 (:init::1) ModeleCentralise.pml:13 (state 4)	[stationR2 = NS]
+		stationR2 = 2
+
+  5:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 21)	[((((posR2==ouest)&&((stationR1!=(stationR2-1))||(posR1!=posR2)))&&(stationR2>1)))]
+  6:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 22)	[stationR2 = (stationR2-1)]
+		stationR2 = 1
+
+  7:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[((((posR1==est)&&((stationR2!=(stationR1+1))||(posR1!=posR2)))&&(stationR1<NS)))]
+  8:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 7)	[stationR1 = (stationR1+1)]
+		stationR1 = 2
+
+  9:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 12)	[((((posR1==est)&&(stationR1==NS))&&((stationR2!=stationR1)||(posR2!=ouest))))]
+ 10:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 13)	[posR1 = ouest]
+		posR1 = ouest
+
+ 11:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 27)	[((((posR2==ouest)&&(stationR2==1))&&((stationR2!=stationR1)||(posR1!=est))))]
+ 12:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 28)	[posR2 = est]
+		posR2 = est
+
+ 13:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 9)	[((((posR1==ouest)&&((stationR2!=(stationR1-1))||(posR1!=posR2)))&&(stationR1>1)))]
+ 14:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 10)	[stationR1 = (stationR1-1)]
+		stationR1 = 1
+
+ 15:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 18)	[((((posR2==est)&&((stationR1!=(stationR2+1))||(posR1!=posR2)))&&(stationR2<NS)))]
+ 16:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 19)	[stationR2 = (stationR2+1)]
+		stationR2 = 2
+
+ 17:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 24)	[((((posR2==est)&&(stationR2==NS))&&((stationR2!=stationR1)||(posR1!=ouest))))]
+ 18:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 25)	[posR2 = ouest]
+		posR2 = ouest
+
+ 19:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 15)	[((((posR1==ouest)&&(stationR1==1))&&((stationR2!=stationR1)||(posR2!=est))))]
+ 20:	proc  0 (:init::1) ModeleCentralise.pml:27 (state 16)	[posR1 = est]
+		posR1 = est
+
+ 21:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 21)	[((((posR2==ouest)&&((stationR1!=(stationR2-1))||(posR1!=posR2)))&&(stationR2>1)))]
+ 22:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 22)	[stationR2 = (stationR2-1)]
+		stationR2 = 1
+
+ 23:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[((((posR1==est)&&((stationR2!=(stationR1+1))||(posR1!=posR2)))&&(stationR1<NS)))]
+ 24:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 7)	[stationR1 = (stationR1+1)]
+		stationR1 = 2
+
+ 25:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 12)	[((((posR1==est)&&(stationR1==NS))&&((stationR2!=stationR1)||(posR2!=ouest))))]
+ 26:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 13)	[posR1 = ouest]
+		posR1 = ouest
+
+ 27:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 27)	[((((posR2==ouest)&&(stationR2==1))&&((stationR2!=stationR1)||(posR1!=est))))]
+ 28:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 28)	[posR2 = est]
+		posR2 = est
+
+ 29:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 18)	[((((posR2==est)&&((stationR1!=(stationR2+1))||(posR1!=posR2)))&&(stationR2<NS)))]
+ 30:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 19)	[stationR2 = (stationR2+1)]
+		stationR2 = 2
+
+ 31:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 9)	[((((posR1==ouest)&&((stationR2!=(stationR1-1))||(posR1!=posR2)))&&(stationR1>1)))]
+ 32:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 10)	[stationR1 = (stationR1-1)]
+		stationR1 = 1
+
+ 33:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 15)	[((((posR1==ouest)&&(stationR1==1))&&((stationR2!=stationR1)||(posR2!=est))))]
+ 34:	proc  0 (:init::1) ModeleCentralise.pml:27 (state 16)	[posR1 = est]
+		posR1 = est
+
+ 35:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 24)	[((((posR2==est)&&(stationR2==NS))&&((stationR2!=stationR1)||(posR1!=ouest))))]
+ 36:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 25)	[posR2 = ouest]
+		posR2 = ouest
+
+ 37:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[((((posR1==est)&&((stationR2!=(stationR1+1))||(posR1!=posR2)))&&(stationR1<NS)))]
+ 38:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 7)	[stationR1 = (stationR1+1)]
+		stationR1 = 2
+
+ 39:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 21)	[((((posR2==ouest)&&((stationR1!=(stationR2-1))||(posR1!=posR2)))&&(stationR2>1)))]
+ 40:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 22)	[stationR2 = (stationR2-1)]
+		stationR2 = 1
+
+ 41:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 27)	[((((posR2==ouest)&&(stationR2==1))&&((stationR2!=stationR1)||(posR1!=est))))]
+ 42:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 28)	[posR2 = est]
+		posR2 = est
+
+ 43:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 12)	[((((posR1==est)&&(stationR1==NS))&&((stationR2!=stationR1)||(posR2!=ouest))))]
+ 44:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 13)	[posR1 = ouest]
+		posR1 = ouest
+
+ 45:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 9)	[((((posR1==ouest)&&((stationR2!=(stationR1-1))||(posR1!=posR2)))&&(stationR1>1)))]
+ 46:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 10)	[stationR1 = (stationR1-1)]
+		stationR1 = 1
+
+ 47:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 18)	[((((posR2==est)&&((stationR1!=(stationR2+1))||(posR1!=posR2)))&&(stationR2<NS)))]
+ 48:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 19)	[stationR2 = (stationR2+1)]
+		stationR2 = 2
+
+ 49:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 15)	[((((posR1==ouest)&&(stationR1==1))&&((stationR2!=stationR1)||(posR2!=est))))]
+ 50:	proc  0 (:init::1) ModeleCentralise.pml:27 (state 16)	[posR1 = est]
+		posR1 = est
+
+-------------
+depth-limit (-u50 steps) reached
+#processes: 1
+		NS = 2
+		NT = 1
+		stationR1 = 1
+		stationR2 = 2
+		posR1 = est
+		posR2 = est
+ 50:	proc  0 (:init::1) ModeleCentralise.pml:15 (state 30)
+1 processes created

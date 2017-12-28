@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="question3" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomaton">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="10.0.1">
+    </property>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
+    </property>
+    <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="SS -&gt; Arrivée Station Suivant&#10; SS1 -&gt; Arrivée Station Suivant Rame 1&#10; SS2 -&gt; Arrivée Station Suivant Rame 2&#10;&#10;CD -&gt; Changement Direction&#10; CD1 -&gt; Changement Direction Rame 1&#10; CD2 -&gt; Changement Direction Rame 2">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[145.0, 315.0]">
+        </property>
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-8, -8, 1382, 744}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1154, 627]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.2500000000000004">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{433.7273975329427, 286.011209238247}">
+    </property>
+    <property name="SS2" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="SS1" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="CD2" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="CD1" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="SS1;SS2 || SS2;SS1" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="(SS1 SS2) || (SS2 SS1)" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="SS" class="ptolemy.data.expr.Parameter">
+    </property>
+    <property name="CD" class="ptolemy.data.expr.Parameter">
+    </property>
+    <port name="" class="ptolemy.actor.TypedIOPort">
+        <property name="input"/>
+        <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[38.74690136319509, 221.4339815961578]">
+        </property>
+    </port>
+    <entity name="state" class="ptolemy.domains.modal.kernel.State">
+        <display name="posR1 = 1&#10;dirR1 = est&#10;posR2 = 2&#10;dirR2 = ouest"/>
+        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+        </property>
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[95.0, 215.0]">
+        </property>
+    </entity>
+    <entity name="state4" class="ptolemy.domains.modal.kernel.State">
+        <display name="posR1 = 2&#10;dirR1 = est&#10;posR2 = 1&#10;dirR2 = ouest"/>
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[280.0, 215.0]">
+        </property>
+    </entity>
+    <entity name="state6" class="ptolemy.domains.modal.kernel.State">
+        <display name="posR1 = 2&#10;dirR1 = ouest&#10;posR2 = 1&#10;dirR2 = est"/>
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[475.0, 215.0]">
+        </property>
+    </entity>
+    <entity name="state8" class="ptolemy.domains.modal.kernel.State">
+        <display name="posR1 = 1&#10;dirR1 = ouest&#10;posR2 = 2&#10;dirR2 = est"/>
+        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, 215.0]">
+        </property>
+    </entity>
+    <relation name="relation9" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomatonTransition">
+        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.015411000311524823">
+        </property>
+        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.5369710787397969">
+        </property>
+        <property name="label" class="ptolemy.kernel.util.StringAttribute" value="SS;">
+        </property>
+    </relation>
+    <relation name="relation" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomatonTransition">
+        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.00987020765325458">
+        </property>
+        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.02024554823174629">
+        </property>
+        <property name="label" class="ptolemy.kernel.util.StringAttribute" value="SS;">
+        </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomatonTransition">
+        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.009448001210595292">
+        </property>
+        <property name="gamma" class="ptolemy.data.expr.Parameter" value="5.200643992131195E-4">
+        </property>
+        <property name="label" class="ptolemy.kernel.util.StringAttribute" value="CD;">
+        </property>
+    </relation>
+    <relation name="relation3" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomatonTransition">
+        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+        </property>
+        <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.141592653589793">
+        </property>
+        <property name="label" class="ptolemy.kernel.util.StringAttribute" value="CD;">
+        </property>
+    </relation>
+    <link port="state.incomingPort" relation="relation3"/>
+    <link port="state.outgoingPort" relation="relation"/>
+    <link port="state4.incomingPort" relation="relation"/>
+    <link port="state4.outgoingPort" relation="relation2"/>
+    <link port="state6.incomingPort" relation="relation2"/>
+    <link port="state6.outgoingPort" relation="relation9"/>
+    <link port="state8.incomingPort" relation="relation9"/>
+    <link port="state8.outgoingPort" relation="relation3"/>
+</entity>

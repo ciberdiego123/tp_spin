@@ -7,9 +7,9 @@
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
     </property>
     <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="SS -&gt; Arrivée Station Suivant&#10; SS1 -&gt; Arrivée Station Suivant Rame 1&#10; SS2 -&gt; Arrivée Station Suivant Rame 2&#10;&#10;CD -&gt; Changement Direction&#10; CD1 -&gt; Changement Direction Rame 1&#10; CD2 -&gt; Changement Direction Rame 2">
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="SS -&gt; Arrivée Station Suivante (Atomic)&#10; SS1 -&gt; Arrivée Station Suivante Rame 1&#10; SS2 -&gt; Arrivée Station Suivante Rame 2&#10;&#10;CD -&gt; Changement Direction (Atomic)&#10; CD1 -&gt; Changement Direction Rame 1&#10; CD2 -&gt; Changement Direction Rame 2">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[145.0, 315.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 325.0]">
         </property>
     </property>
     <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-8, -8, 1382, 744}, maximized=true}">
@@ -36,11 +36,18 @@
     </property>
     <property name="CD" class="ptolemy.data.expr.Parameter">
     </property>
+    <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+        <display name="Automat Système Abstrait&#10;  NS = 2; NT = 1; NR =2;"/>
+        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Automate Système Abstrait&#10;   NS = 2, NT = 1 , NR=2 ">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, 60.0]">
+        </property>
+    </property>
     <port name="" class="ptolemy.actor.TypedIOPort">
         <property name="input"/>
         <property name="defaultValue" class="ptolemy.data.expr.Parameter">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[38.74690136319509, 221.4339815961578]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[29.24690136319498, 247.88799106948147]">
         </property>
     </port>
     <entity name="state" class="ptolemy.domains.modal.kernel.State">
@@ -49,28 +56,28 @@
         </property>
         <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[95.0, 215.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[85.49999999999989, 241.45400947332368]">
         </property>
     </entity>
     <entity name="state4" class="ptolemy.domains.modal.kernel.State">
         <display name="posR1 = 2&#10;dirR1 = est&#10;posR2 = 1&#10;dirR2 = ouest"/>
         <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[280.0, 215.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[270.4999999999999, 241.45400947332368]">
         </property>
     </entity>
     <entity name="state6" class="ptolemy.domains.modal.kernel.State">
         <display name="posR1 = 2&#10;dirR1 = ouest&#10;posR2 = 1&#10;dirR2 = est"/>
         <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[475.0, 215.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[465.4999999999999, 241.45400947332368]">
         </property>
     </entity>
     <entity name="state8" class="ptolemy.domains.modal.kernel.State">
         <display name="posR1 = 1&#10;dirR1 = ouest&#10;posR2 = 2&#10;dirR2 = est"/>
         <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, 215.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[650.4999999999999, 241.45400947332368]">
         </property>
     </entity>
     <relation name="relation9" class="ptolemy.domains.modal.kernel.ia.InterfaceAutomatonTransition">

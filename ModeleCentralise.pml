@@ -1,43 +1,44 @@
 /* Ligne 14 a 1 seul processus */
 int NS = 2; /* Stations */
 int NT = NS - 1; /* Troncons */
-int posR1, posR2;
-mtype = {ouest,est};
-mtype dirR1, dirR2;
+int posR1, posR2; /* Positions 0 a NS */
+int dirR1, dirR2; /* Directions -1 Ouest *** 1 est */
 
 init {
 	d_step{
-		dirR1 = est;
-		dirR2 = ouest;
+		dirR1 = 1;  /* Est */
+		dirR2 = -1; /* Ouest */
 		posR1 = 1;
 		posR2 = NS;
 	}
 	do
 		/* Rame 1 */
-		/* Station Suivante */
-		:: d_step{dirR1==est && (posR2!=posR1+1  || dirR1 != dirR2) && posR1<NS 
-				-> posR1 = posR1 + 1;}
-		:: d_step{dirR1==ouest && (posR2!=posR1-1  || dirR1 != dirR2) && posR1>1
-				->posR1 = posR1 - 1;}
+		/* Arrivee Station Suivante */
+		/* Progress au moment de avancer*/
+		:: atomic{dirR1==1 && (posR2!=posR1+1  || dirR1 != dirR2) && posR1<NS 
+				-> posR1 = posR1 + 1;} progress0 : skip
+		:: atomic{dirR1==-1 && (posR2!=posR1-1  || dirR1 != dirR2) && posR1>1
+				-> posR1 = posR1 - 1;} progress1 : skip
 			
 		/* Changement Direction */
-		:: d_step{dirR1==est && posR1==NS && (posR2!=posR1  || dirR2 != ouest)
-				->dirR1 = ouest;}
-		:: d_step{dirR1==ouest && posR1==1 && (posR2!=posR1  || dirR2 != est)
-				-> dirR1 = est;}
+		:: atomic{dirR1==1 && posR1==NS && (posR2!=posR1  || dirR2 != -1)
+				-> dirR1 = -1;}
+		:: atomic{dirR1==-1 && posR1==1 && (posR2!=posR1  || dirR2 != 1)
+				-> dirR1 = 1;}
 		
 		/* Rame 2 */	
-		/* Station Suivante */
-		:: d_step{dirR2==est && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
-				-> posR2 = posR2 + 1;}
-		:: d_step{dirR2==ouest && (posR1!=posR2-1  || dirR1 != dirR2) && posR2>1
-				-> posR2 = posR2 - 1;}
+		/* Arrivee Station Suivante */
+		/* Progress au moment de avancer*/
+		:: atomic{dirR2==1 && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
+				-> posR2 = posR2 + 1;} progress2 : skip
+		:: atomic{dirR2==-1 && (posR1!=posR2-1  || dirR1 != dirR2) && posR2>1
+				-> posR2 = posR2 - 1;} progress3 : skip
 			
 		/* Changement Direction */
-		:: d_step{dirR2==est && posR2==NS && (posR2!=posR1  || dirR1 != ouest)
-				-> dirR2 = ouest;}
-		:: d_step{dirR2==ouest && posR2==1 && (posR2!=posR1  || dirR1 != est)
-				-> dirR2 = est;}
+		:: atomic{dirR2==1 && posR2==NS && (posR2!=posR1  || dirR1 != -1)
+				-> dirR2 = -1;}
+		:: atomic{dirR2==-1 && posR2==1 && (posR2!=posR1  || dirR1 != 1)
+				-> dirR2 = 1;}
 	od ;
 }
 

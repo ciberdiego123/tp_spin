@@ -2,179 +2,3436 @@
 programa o archivo por lotes ejecutable.
 "gcc-3" no se reconoce como un comando interno o externo,
 programa o archivo por lotes ejecutable.
-spin: Modele2Processus.pml:27, warning, atomic inside atomic (ignored)
-spin: Modele2Processus.pml:60, warning, atomic inside atomic (ignored)
   0:	proc  - (:root:) creates proc  0 (:init:)
 spin: Modele2Processus.pml:0, warning, global, 'int   NT' variable is never used (other than in print stmnts)
 Starting Rame1 with pid 1
   1:	proc  0 (:init::1) creates proc  1 (Rame1)
-  1:	proc  0 (:init::1) Modele2Processus.pml:78 (state 1)	[(run Rame1())]
+  1:	proc  0 (:init::1) Modele2Processus.pml:72 (state 1)	[(run Rame1())]
 
 Starting Rame2 with pid 2
   2:	proc  0 (:init::1) creates proc  2 (Rame2)
-  2:	proc  0 (:init::1) Modele2Processus.pml:79 (state 2)	[(run Rame2())]
+  2:	proc  0 (:init::1) Modele2Processus.pml:73 (state 2)	[(run Rame2())]
 
-  3:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 3)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+  3:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+  3:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+  3:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+  3:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
-  4:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 4)	[posR2 = (posR2-1)]
-		Rame2(2):posR2 = 1
+  4:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+  4:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
 
-  5:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 12)	[(1)]
+  5:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
 
-  6:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+  6:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
 
-  7:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 2)	[posR1 = (posR1+1)]
+  7:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
 		Rame1(1):posR1 = 2
 
-  8:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 12)	[(1)]
+  8:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+  8:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
 
-  9:	proc  2 (Rame2:1) Modele2Processus.pml:74 (state 23)	[.(goto)]
+  9:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
- 10:	proc  1 (Rame1:1) Modele2Processus.pml:41 (state 23)	[.(goto)]
+ 10:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
 
- 11:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 5)	[else]
+ 11:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 11:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 11:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 11:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
- 12:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 6)	[ReqR1!1]
- 12:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 19)	[ReqR1?1]
- 12:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 2!1]
- 12:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 2?1]
+ 12:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+ 12:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
 
- 13:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 3!2,1]
- 13:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 20)	[R1ToR2!posR1,dirR1]
-		queue 3 (R1ToR2): [2,1]
+ 13:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
 
- 14:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 3?2,1]
- 14:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 7)	[R1ToR2?posR1,dirR1]
-		queue 3 (R1ToR2): 
+ 14:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+ 14:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
 		Rame2(2):dirR1 = 1
 		Rame2(2):posR1 = 2
 
- 15:	proc  1 (Rame1:1) Modele2Processus.pml:41 (state 23)	[.(goto)]
+ 15:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 15:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 15:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 15:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
 
- 16:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 5)	[else]
+ 16:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+ 16:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
 
- 17:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 12)	[(1)]
+ 17:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
- 18:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 6)	[ReqR2!1]
- 18:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 19)	[ReqR2?1]
- 18:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 1!1]
- 18:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 1?1]
+ 18:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+ 18:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
 
- 19:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 4!1,-1]
- 19:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 20)	[R2ToR1!posR2,dirR2]
+ 19:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+ 20:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+ 21:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+ 22:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 23:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 23:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 23:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 23:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 24:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+ 24:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
 		queue 4 (R2ToR1): [1,-1]
 
- 20:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 4?1,-1]
- 20:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 7)	[R2ToR1?posR2,dirR2]
+ 25:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 26:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+ 26:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
 		queue 4 (R2ToR1): 
 		Rame1(1):dirR2 = -1
 		Rame1(1):posR2 = 1
 
- 21:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 12)	[(1)]
+ 27:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
 
- 22:	proc  2 (Rame2:1) Modele2Processus.pml:74 (state 23)	[.(goto)]
-
- 23:	proc  1 (Rame1:1) Modele2Processus.pml:41 (state 23)	[.(goto)]
-
- 24:	proc  2 (Rame2:1) Modele2Processus.pml:67 (state 16)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
-
- 25:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 17)	[dirR2 = 1]
+ 28:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
 		Rame2(2):dirR2 = 1
 
- 26:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 5)	[else]
+ 29:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
- 27:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 6)	[ReqR2!1]
- 27:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 19)	[ReqR2?1]
- 27:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 1!1]
- 27:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 1?1]
+ 30:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 30:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 30:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 30:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
- 28:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 4!1,1]
- 28:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 20)	[R2ToR1!posR2,dirR2]
+ 31:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+ 31:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+ 32:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 33:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+ 33:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+ 34:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+ 35:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+ 36:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 37:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 38:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 38:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 38:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 38:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 39:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+ 39:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
 		queue 4 (R2ToR1): [1,1]
 
- 29:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 4?1,1]
- 29:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 7)	[R2ToR1?posR2,dirR2]
+ 40:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 41:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+ 41:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
 		queue 4 (R2ToR1): 
 		Rame1(1):dirR2 = 1
 		Rame1(1):posR2 = 1
 
- 30:	proc  2 (Rame2:1) Modele2Processus.pml:74 (state 23)	[.(goto)]
+ 42:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 42:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 42:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 42:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
- 31:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 12)	[(1)]
+ 43:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+ 43:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
 
- 32:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 5)	[else]
-
- 33:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 6)	[ReqR1!1]
- 33:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 19)	[ReqR1?1]
- 33:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 2!1]
- 33:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 2?1]
-
- 34:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 3!2,1]
- 34:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 20)	[R1ToR2!posR1,dirR1]
-		queue 3 (R1ToR2): [2,1]
-
- 35:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 3?2,1]
- 35:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 7)	[R1ToR2?posR1,dirR1]
-		queue 3 (R1ToR2): 
-		Rame2(2):dirR1 = 1
+ 44:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+ 44:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
 		Rame2(2):posR1 = 2
 
- 36:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 12)	[(1)]
+ 45:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
 
- 37:	proc  1 (Rame1:1) Modele2Processus.pml:41 (state 23)	[.(goto)]
+ 46:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
- 38:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 5)	[else]
+ 47:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 47:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 47:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 47:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
- 39:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 6)	[ReqR2!1]
- 39:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 19)	[ReqR2?1]
- 39:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 1!1]
- 39:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 1?1]
+ 48:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+ 48:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
 
- 40:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state -)	[values: 4!1,1]
- 40:	proc  2 (Rame2:1) Modele2Processus.pml:71 (state 20)	[R2ToR1!posR2,dirR2]
+ 49:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+ 49:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+ 50:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 51:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 51:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 51:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 51:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 52:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+ 52:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
 		queue 4 (R2ToR1): [1,1]
 
- 41:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state -)	[values: 4?1,1]
- 41:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 7)	[R2ToR1?posR2,dirR2]
+ 53:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+ 53:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
 		queue 4 (R2ToR1): 
 		Rame1(1):dirR2 = 1
 		Rame1(1):posR2 = 1
 
- 42:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 12)	[(1)]
+ 54:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
- 43:	proc  2 (Rame2:1) Modele2Processus.pml:74 (state 23)	[.(goto)]
+ 55:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 55:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 55:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 55:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
 
- 44:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 5)	[else]
+ 56:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+ 56:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
 
- 45:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 6)	[ReqR1!1]
- 45:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 19)	[ReqR1?1]
- 45:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 2!1]
- 45:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 2?1]
+ 57:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
 
- 46:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state -)	[values: 3!2,1]
- 46:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 20)	[R1ToR2!posR1,dirR1]
-		queue 3 (R1ToR2): [2,1]
+ 58:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
 
- 47:	proc  1 (Rame1:1) Modele2Processus.pml:41 (state 23)	[.(goto)]
+ 59:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
 
- 48:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state -)	[values: 3?2,1]
- 48:	proc  2 (Rame2:1) Modele2Processus.pml:60 (state 7)	[R1ToR2?posR1,dirR1]
-		queue 3 (R1ToR2): 
+ 60:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+ 61:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+ 61:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+ 62:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 63:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 64:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 64:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 64:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 64:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 65:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+ 65:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+ 66:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 67:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+ 68:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+ 69:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+ 69:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+ 70:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 71:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+ 72:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 72:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 72:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 72:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 73:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+ 73:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+ 74:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+ 74:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+ 75:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 76:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 77:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 77:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 77:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 77:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+ 78:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+ 78:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+ 79:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 80:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+ 81:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+ 82:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+ 82:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+ 83:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 84:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+ 85:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+ 86:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 87:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+ 87:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+ 87:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+ 87:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+ 88:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+ 88:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+ 89:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+ 89:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+ 90:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 91:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+ 91:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+ 91:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+ 91:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+ 92:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+ 92:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+ 93:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+ 93:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+ 94:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+ 95:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+ 96:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+ 97:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+ 98:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+ 99:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+100:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+101:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+102:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+103:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+103:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+103:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+103:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+104:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+104:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+105:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+106:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+106:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+107:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+108:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+108:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+108:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+108:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+109:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+109:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+110:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+110:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
 		Rame2(2):dirR1 = 1
 		Rame2(2):posR1 = 2
 
- 49:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 5)	[else]
+111:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
 
- 50:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 12)	[(1)]
+112:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
 
--------------
-depth-limit (-u50 steps) reached
-#processes: 3
-		NS = 2
-		NT = 1
-		queue 3 (R1ToR2): 
+113:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+114:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+115:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+116:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+116:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+116:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+116:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+117:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+117:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+118:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+118:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+119:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+120:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+121:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+121:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+121:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+121:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+122:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+122:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+123:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+124:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+125:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+126:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+127:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+127:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+128:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+129:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+129:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+129:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+129:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+130:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+130:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+131:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+132:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+132:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+133:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+134:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+134:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+134:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+134:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+135:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+135:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+136:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+137:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+137:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+138:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+139:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+139:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+139:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+139:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+140:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+140:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+141:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+141:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
 		queue 4 (R2ToR1): 
- 50:	proc  2 (Rame2:1) Modele2Processus.pml:74 (state 23)
- 50:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 8)
- 50:	proc  0 (:init::1) Modele2Processus.pml:81 (state 4)
-3 processes created
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+142:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+143:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+143:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+143:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+143:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+144:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+144:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+145:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+146:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+147:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+148:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+149:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+149:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+150:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+151:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+152:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+153:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+154:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+155:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+156:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+156:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+156:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+156:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+157:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+157:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+158:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+159:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+159:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+160:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+161:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+162:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+163:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+164:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+164:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+164:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+164:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+165:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+165:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+166:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+166:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+167:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+168:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+168:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+168:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+168:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+169:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+169:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+170:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+170:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+171:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+172:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+172:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+172:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+172:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+173:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+173:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+174:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+175:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+175:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+176:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+177:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+177:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+177:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+177:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+178:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+178:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+179:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+180:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+180:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+181:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+182:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+183:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+184:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+184:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+184:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+184:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+185:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+185:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+186:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+186:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+187:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+188:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+188:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+188:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+188:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+189:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+189:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+190:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+191:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+191:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+192:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+193:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+193:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+193:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+193:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+194:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+194:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+195:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+195:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+196:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+197:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+197:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+197:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+197:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+198:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+198:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+199:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+200:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+200:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+201:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+202:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+202:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+202:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+202:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+203:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+203:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+204:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+204:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+205:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+206:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+207:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+207:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+207:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+207:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+208:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+208:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+209:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+209:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+210:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+211:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+212:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+212:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+212:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+212:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+213:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+213:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+214:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+214:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+215:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+216:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+217:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+218:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+219:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+220:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+221:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+221:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+221:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+221:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+222:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+222:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+223:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+224:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+225:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+226:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+227:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+228:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+228:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+229:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+229:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+229:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+229:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+230:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+230:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+231:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+232:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+232:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+233:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+234:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+234:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+234:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+234:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+235:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+235:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+236:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+237:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+238:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+239:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+240:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+240:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+241:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+242:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+243:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+244:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+245:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+245:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+245:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+245:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+246:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+246:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+247:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+248:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+248:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+249:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+250:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+250:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+250:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+250:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+251:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+251:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+252:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+253:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+253:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+254:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+255:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+256:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+257:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+258:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+258:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+258:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+258:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+259:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+259:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+260:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+260:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+261:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+262:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+263:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+263:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+263:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+263:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+264:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+264:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+265:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+265:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+266:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+267:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+268:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+268:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+268:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+268:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+269:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+269:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+270:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+270:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+271:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+272:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+273:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+273:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+273:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+273:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+274:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+274:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+275:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+275:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+276:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+277:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+277:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+277:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+277:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+278:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+278:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+279:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+280:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+281:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+282:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+283:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+284:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+285:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+286:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+286:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+287:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+288:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+288:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+288:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+288:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+289:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+289:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+290:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+291:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+291:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+292:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+292:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+292:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+292:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+293:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+293:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+294:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+295:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+296:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+297:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+298:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+298:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+299:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+300:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+300:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+300:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+300:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+301:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+301:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+302:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+302:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+303:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+304:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+305:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+306:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+307:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+308:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+309:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+310:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+311:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+312:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+312:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+312:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+312:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+313:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+313:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+314:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+314:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+315:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+316:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+317:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+318:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+319:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+319:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+319:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+319:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+320:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+320:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+321:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+322:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+322:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+323:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+324:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+324:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+324:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+324:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+325:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+325:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+326:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+327:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+327:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+328:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+329:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+329:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+329:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+329:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+330:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+330:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+331:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+331:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+332:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+333:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+333:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+333:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+333:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+334:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+334:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+335:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+336:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+337:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+338:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+339:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+340:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+341:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+341:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+342:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+343:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+344:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+345:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+345:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+345:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+345:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+346:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+346:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+347:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+347:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+348:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+349:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+350:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+350:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+350:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+350:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+351:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+351:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+352:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+352:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+353:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+354:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+355:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+355:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+355:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+355:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+356:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+356:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+357:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+357:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+358:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+359:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+359:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+359:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+359:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+360:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+360:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+361:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+362:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+362:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+363:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+364:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+364:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+364:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+364:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+365:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+365:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+366:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+366:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+367:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+368:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+369:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+369:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+369:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+369:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+370:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+370:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+371:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+372:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+373:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+374:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+374:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+375:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+376:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+377:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+378:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+378:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+378:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+378:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+379:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+379:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+380:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+380:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+381:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+382:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+383:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+384:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+385:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+385:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+385:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+385:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+386:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+386:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+387:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+387:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+388:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+389:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+390:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+390:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+390:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+390:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+391:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+391:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+392:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+392:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+393:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+394:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+395:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+396:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+397:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+397:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+397:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+397:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+398:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+398:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+399:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+399:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+400:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+401:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+401:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+401:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+401:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+402:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+402:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+403:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+403:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+404:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+405:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+406:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+407:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+408:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+409:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+410:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+411:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+412:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+413:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+414:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+414:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+414:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+414:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+415:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+415:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+416:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+416:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+417:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+418:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+418:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+418:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+418:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+419:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+419:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+420:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+420:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+421:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+422:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+423:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+424:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+425:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+426:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+426:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+426:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+426:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+427:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+427:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+428:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+429:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+430:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+431:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+432:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+432:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+433:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+434:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+434:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+434:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+434:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+435:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+435:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+436:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+436:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+437:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+438:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+439:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+439:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+439:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+439:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+440:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+440:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+441:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+442:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+442:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+443:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+443:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+443:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+443:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+444:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+444:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+445:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+446:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+446:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+447:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+448:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+448:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+448:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+448:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+449:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+449:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+450:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+450:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+451:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+452:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+452:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+452:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+452:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+453:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+453:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+454:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+454:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+455:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+456:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+457:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+458:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+459:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+460:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+461:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+462:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+463:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+464:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+464:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+464:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+464:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+465:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+465:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+466:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+466:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+467:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+468:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+469:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+470:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+471:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+471:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+471:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+471:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+472:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+472:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+473:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+473:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+474:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+475:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+475:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+475:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+475:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+476:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+476:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+477:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+478:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+479:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+480:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+480:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+481:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+482:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+482:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+482:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+482:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+483:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+483:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+484:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+484:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+485:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+486:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+487:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+488:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+489:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+490:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+491:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+492:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+493:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+494:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+495:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+495:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+495:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+495:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+496:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+496:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+497:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+498:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+498:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+499:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+499:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+499:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+499:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+500:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+500:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+501:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+501:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+502:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+503:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+504:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+505:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+506:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+507:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+508:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+509:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+510:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+510:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+510:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+510:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+511:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+511:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+512:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+512:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+513:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+514:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+514:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+514:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+514:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+515:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+515:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+516:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+517:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+517:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+518:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+518:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+518:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+518:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+519:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+519:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+520:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+521:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+522:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+523:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+523:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+524:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+525:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+526:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+527:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+528:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+529:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+530:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+530:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+530:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+530:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+531:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+531:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+532:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+532:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+533:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+534:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+535:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+535:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+535:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+535:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+536:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+536:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+537:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+538:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+538:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+539:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+540:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+541:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+542:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+543:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+544:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+545:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+545:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+545:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+545:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+546:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+546:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+547:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+547:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+548:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+549:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+550:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+550:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+550:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+550:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+551:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+551:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+552:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+553:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+553:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+554:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+555:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+556:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+557:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+558:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+559:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+560:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+561:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+562:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+562:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+562:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+562:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+563:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+563:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+564:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+565:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+565:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+566:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+567:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+568:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+569:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+569:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+569:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+569:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+570:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+570:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+571:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+572:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+572:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+573:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+574:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+574:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+574:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+574:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+575:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+575:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+576:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+577:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+578:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+579:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+579:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+580:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+581:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+581:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+581:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+581:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+582:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+582:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+583:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+584:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+584:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+585:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+586:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+586:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+586:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+586:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+587:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+587:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+588:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+589:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+589:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+590:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+591:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+592:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+593:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+594:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+595:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+595:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+595:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+595:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+596:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+596:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+597:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+597:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+598:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+599:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+600:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+600:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+600:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+600:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+601:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+601:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+602:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+603:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+603:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+604:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+605:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+605:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+605:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+605:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+606:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+606:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+607:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+608:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+608:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+609:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+610:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+610:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+610:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+610:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+611:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+611:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+612:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+613:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+613:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+614:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+614:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+614:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+614:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+615:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+615:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+616:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+617:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+617:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+618:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+618:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+618:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+618:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+619:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+619:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+620:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+621:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+621:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+622:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+623:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+623:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+623:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+623:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+624:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+624:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+625:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+626:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+627:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+628:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+628:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+629:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+630:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+631:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+632:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+633:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+634:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+635:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+635:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+635:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+635:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+636:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+636:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+637:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+637:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+638:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+639:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+639:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+639:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+639:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+640:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+640:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+641:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+642:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+642:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+643:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+644:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+645:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+646:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+646:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+646:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+646:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+647:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+647:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+648:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+649:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+649:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+650:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+651:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+651:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+651:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+651:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+652:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+652:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+653:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+653:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+654:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+655:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+656:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+657:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+658:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+659:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+659:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+659:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+659:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+660:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+660:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+661:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+661:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+662:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+663:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+663:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+663:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+663:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+664:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+664:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+665:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+665:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+666:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+667:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+667:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+667:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+667:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+668:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+668:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+669:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+670:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+670:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+671:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+671:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+671:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+671:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+672:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+672:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+673:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+673:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+674:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+675:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+676:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+677:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+678:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+679:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+680:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+680:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+680:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+680:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+681:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+681:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+682:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+682:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+683:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+684:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+685:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+685:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+685:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+685:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+686:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+686:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+687:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+687:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+688:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+689:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+690:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+690:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+690:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+690:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+691:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+691:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+692:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+693:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+694:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+695:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+696:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+696:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+697:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+697:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+697:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+697:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+698:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+698:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+699:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+700:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+700:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+701:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+702:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+703:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+704:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+705:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+705:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+705:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+705:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+706:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+706:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+707:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+708:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+708:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+709:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+710:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+710:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+710:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+710:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+711:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+711:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+712:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+712:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+713:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+714:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+715:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+716:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+717:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+718:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+719:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+720:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+721:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+722:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+722:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+722:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+722:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+723:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+723:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+724:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+725:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+725:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+726:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+726:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+726:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+726:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+727:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+727:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+728:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+729:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+729:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+730:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+731:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+732:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+733:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+734:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+735:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+736:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+736:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+736:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+736:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+737:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+737:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+738:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+738:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+739:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+740:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+741:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+741:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+741:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+741:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+742:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+742:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+743:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+743:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+744:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+745:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+745:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+745:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+745:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+746:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+746:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+747:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+748:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+749:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+750:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+751:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+751:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+752:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+753:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+753:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+753:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+753:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+754:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+754:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+755:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+756:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+756:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+757:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+758:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+759:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+760:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+761:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+761:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+761:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+761:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+762:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+762:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+763:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+764:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+764:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+765:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+765:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+765:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+765:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+766:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+766:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+767:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+767:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+768:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+769:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+770:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+771:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+772:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+772:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+772:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+772:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+773:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+773:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+774:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+775:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+776:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+777:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+778:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+778:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+779:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+780:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+780:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+780:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+780:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+781:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+781:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+782:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+783:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+783:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+784:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+784:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+784:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+784:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+785:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+785:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+786:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+787:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+787:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+788:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+789:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+790:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+791:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+792:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+793:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+793:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+793:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+793:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+794:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+794:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+795:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+796:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+796:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+797:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+798:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+798:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+798:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+798:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+799:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+799:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+800:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+800:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+801:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+802:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+802:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+802:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+802:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+803:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+803:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+804:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+804:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+805:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+806:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+807:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+807:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+807:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+807:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+808:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+808:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+809:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+810:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+810:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+811:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+811:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+811:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+811:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+812:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+812:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+813:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+813:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+814:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+815:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+816:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+816:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+816:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+816:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+817:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+817:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+818:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+818:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+819:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+820:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+821:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+821:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+821:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+821:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+822:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+822:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+823:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+823:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+824:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+825:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+826:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+826:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+826:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+826:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+827:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+827:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+828:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+828:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+829:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+830:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+830:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+830:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+830:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+831:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+831:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+832:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+832:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+833:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+834:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+834:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+834:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+834:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+835:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+835:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+836:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+836:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+837:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+838:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+838:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+838:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+838:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+839:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+839:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+840:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+841:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+842:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+843:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+844:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+845:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+846:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+847:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+847:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+848:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+849:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+850:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+850:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+850:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+850:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+851:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+851:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+852:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+853:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+853:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+854:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+855:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+855:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+855:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+855:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+856:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+856:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+857:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+858:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+858:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+859:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+860:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+861:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+862:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+862:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+862:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+862:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+863:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+863:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+864:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+865:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+866:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+867:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+867:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+868:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+869:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+870:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+871:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+872:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+873:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+874:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+874:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+874:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+874:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+875:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+875:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+876:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+877:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+877:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+878:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+878:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+878:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+878:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+879:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,-1]
+879:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,-1]
+
+880:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+881:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+882:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+883:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+884:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,-1]
+884:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 1
+
+885:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+886:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+887:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+888:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+889:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+889:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+889:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+889:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+890:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+890:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+891:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+892:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+892:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+893:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+893:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+893:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+893:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+894:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+894:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+895:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+895:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+896:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+897:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+898:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+899:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]
+		Rame2(2):posR2 = 2
+
+900:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+901:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+902:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 8)	[(1)]
+
+903:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 4)	[(1)]
+
+904:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+905:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+905:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+905:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+905:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+906:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+906:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+907:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+907:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+908:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+909:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+909:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+909:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+909:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+910:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,-1]
+910:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,-1]
+
+911:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+912:	proc  1 (Rame1:1) Modele2Processus.pml:28 (state 12)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+913:	proc  1 (Rame1:1) Modele2Processus.pml:29 (state 13)	[dirR1 = 1]
+		Rame1(1):dirR1 = 1
+
+914:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+915:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,-1]
+915:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 1
+
+916:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+916:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+916:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+916:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+917:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,1]
+917:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,1]
+
+918:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,1]
+918:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 2
+
+919:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+920:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+921:	proc  2 (Rame2:1) Modele2Processus.pml:56 (state 9)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+922:	proc  2 (Rame2:1) Modele2Processus.pml:57 (state 10)	[dirR2 = -(1)]
+		Rame2(2):dirR2 = -1
+
+923:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+924:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+924:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+924:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+924:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+925:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+925:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+926:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+926:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+927:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+928:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+928:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+928:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+928:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+929:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!1,1]
+929:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [1,1]
+
+930:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+931:	proc  1 (Rame1:1) Modele2Processus.pml:20 (state 1)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+932:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 2)	[posR1 = (posR1+1)]
+		Rame1(1):posR1 = 2
+
+933:	proc  1 (Rame1:1) Modele2Processus.pml:21 (state 4)	[(1)]
+
+934:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+935:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?1,1]
+935:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 1
+
+936:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+936:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+936:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+936:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+937:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+937:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+938:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+938:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+939:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+940:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+940:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+940:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+940:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+941:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!2,-1]
+941:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [2,-1]
+
+942:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+943:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?2,-1]
+943:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = -1
+		Rame1(1):posR2 = 2
+
+944:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+944:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+944:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+944:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+945:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+945:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+946:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+946:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+947:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+948:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+948:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+948:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+948:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+949:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+949:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+950:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+950:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+951:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+952:	proc  2 (Rame2:1) Modele2Processus.pml:52 (state 5)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+953:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 6)	[posR2 = (posR2-1)]
+		Rame2(2):posR2 = 1
+
+954:	proc  2 (Rame2:1) Modele2Processus.pml:53 (state 8)	[(1)]
+
+955:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+956:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+957:	proc  2 (Rame2:1) Modele2Processus.pml:58 (state 12)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+958:	proc  2 (Rame2:1) Modele2Processus.pml:59 (state 13)	[dirR2 = 1]
+		Rame2(2):dirR2 = 1
+
+959:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 15)	[ReqR2!1]
+959:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 18)	[ReqR2?1]
+959:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 3!1]
+959:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 3?1]
+
+960:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state -)	[values: 4!1,1]
+960:	proc  2 (Rame2:1) Modele2Processus.pml:65 (state 19)	[R2ToR1!posR2,dirR2]
+		queue 4 (R2ToR1): [1,1]
+
+961:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state -)	[values: 4?1,1]
+961:	proc  1 (Rame1:1) Modele2Processus.pml:32 (state 16)	[R2ToR1?posR2,dirR2]
+		queue 4 (R2ToR1): 
+		Rame1(1):dirR2 = 1
+		Rame1(1):posR2 = 1
+
+962:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+963:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+964:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+964:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+964:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+964:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+965:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+965:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+966:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+966:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+967:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+968:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+968:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+968:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+968:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+969:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,1]
+969:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,1]
+
+970:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+971:	proc  1 (Rame1:1) Modele2Processus.pml:26 (state 9)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+972:	proc  1 (Rame1:1) Modele2Processus.pml:27 (state 10)	[dirR1 = -(1)]
+		Rame1(1):dirR1 = -1
+
+973:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,1]
+973:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = 1
+		Rame2(2):posR1 = 2
+
+974:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+975:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 15)	[ReqR1!1]
+975:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 18)	[ReqR1?1]
+975:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 1!1]
+975:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 1?1]
+
+976:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state -)	[values: 2!2,-1]
+976:	proc  1 (Rame1:1) Modele2Processus.pml:35 (state 19)	[R1ToR2!posR1,dirR1]
+		queue 2 (R1ToR2): [2,-1]
+
+977:	proc  1 (Rame1:1) Modele2Processus.pml:38 (state 22)	[.(goto)]
+
+978:	proc  1 (Rame1:1) Modele2Processus.pml:22 (state 5)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+979:	proc  1 (Rame1:1) Modele2Processus.pml:23 (state 6)	[posR1 = (posR1-1)]
+		Rame1(1):posR1 = 1
+
+980:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state -)	[values: 2?2,-1]
+980:	proc  2 (Rame2:1) Modele2Processus.pml:62 (state 16)	[R1ToR2?posR1,dirR1]
+		queue 2 (R1ToR2): 
+		Rame2(2):dirR1 = -1
+		Rame2(2):posR1 = 2
+
+981:	proc  2 (Rame2:1) Modele2Processus.pml:68 (state 22)	[.(goto)]
+
+982:	proc  2 (Rame2:1) Modele2Processus.pml:50 (state 1)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+983:	proc  2 (Rame2:1) Modele2Processus.pml:51 (state 2)	[posR2 = (posR2+1)]

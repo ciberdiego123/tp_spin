@@ -5,12 +5,11 @@ int posR1, posR2; /* Positions 0 a NS */
 int dirR1, dirR2; /* Directions -1 Ouest *** 1 est */
 
 init {
-	d_step{
-		dirR1 = 1;  /* Est */
-		dirR2 = -1; /* Ouest */
-		posR1 = 1;
-		posR2 = NS;
-	}
+	dirR1 = 1;  /* Est */
+	dirR2 = -1; /* Ouest */
+	posR1 = 1;
+	posR2 = NS;
+
 	do
 		/* Rame 1 */
 		/* Arrivee Station Suivante */

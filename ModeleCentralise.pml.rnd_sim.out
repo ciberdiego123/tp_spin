@@ -4,115 +4,1757 @@ programa o archivo por lotes ejecutable.
 programa o archivo por lotes ejecutable.
   0:	proc  - (:root:) creates proc  0 (:init:)
 spin: ModeleCentralise.pml:0, warning, global, 'int   NT' variable is never used (other than in print stmnts)
-  1:	proc  0 (:init::1) ModeleCentralise.pml:9 (state 1)	[dirR1 = 1]
-		dirR1 = 1
-  2:	proc  0 (:init::1) ModeleCentralise.pml:10 (state 2)	[dirR2 = -(1)]
-		dirR2 = -1
-  3:	proc  0 (:init::1) ModeleCentralise.pml:11 (state 3)	[posR1 = 1]
-		posR1 = 1
-  4:	proc  0 (:init::1) ModeleCentralise.pml:12 (state 4)	[posR2 = NS]
-		posR2 = 2
-
-  5:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
-  6:	proc  0 (:init::1) ModeleCentralise.pml:35 (state 25)	[posR2 = (posR2-1)]
-		posR2 = 1
-
-  7:	proc  0 (:init::1) ModeleCentralise.pml:35 (state 27)	[(1)]
-
-  8:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
-  9:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
- 10:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 7)	[posR1 = (posR1+1)]
-		posR1 = 2
-
- 11:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[(1)]
-
- 12:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
- 13:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
- 14:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 15)	[dirR1 = -(1)]
-		dirR1 = -1
-
- 15:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
- 16:	proc  0 (:init::1) ModeleCentralise.pml:41 (state 32)	[dirR2 = 1]
-		dirR2 = 1
-
- 17:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
- 18:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 21)	[posR2 = (posR2+1)]
-		posR2 = 2
-
- 19:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[(1)]
-
- 20:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
- 21:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
- 22:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 11)	[posR1 = (posR1-1)]
-		posR1 = 1
-
- 23:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 13)	[(1)]
-
- 24:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
- 25:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
- 26:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 29)	[dirR2 = -(1)]
-		dirR2 = -1
-
- 27:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
- 28:	proc  0 (:init::1) ModeleCentralise.pml:27 (state 18)	[dirR1 = 1]
+  1:	proc  0 (:init::1) ModeleCentralise.pml:8 (state 1)	[dirR1 = 1]
 		dirR1 = 1
 
- 29:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
- 30:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 7)	[posR1 = (posR1+1)]
-		posR1 = 2
+  2:	proc  0 (:init::1) ModeleCentralise.pml:9 (state 2)	[dirR2 = -(1)]
+		dirR2 = -1
 
- 31:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[(1)]
+  3:	proc  0 (:init::1) ModeleCentralise.pml:10 (state 3)	[posR1 = 1]
+		posR1 = 1
 
- 32:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
+  4:	proc  0 (:init::1) ModeleCentralise.pml:11 (state 4)	[posR2 = NS]
+		posR2 = 2
 
- 33:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
- 34:	proc  0 (:init::1) ModeleCentralise.pml:35 (state 25)	[posR2 = (posR2-1)]
+  5:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+  6:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+  7:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
 		posR2 = 1
 
- 35:	proc  0 (:init::1) ModeleCentralise.pml:35 (state 27)	[(1)]
+  8:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
 
- 36:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
+  9:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
 
- 37:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
- 38:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 15)	[dirR1 = -(1)]
-		dirR1 = -1
+ 10:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
 
- 39:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
- 40:	proc  0 (:init::1) ModeleCentralise.pml:41 (state 32)	[dirR2 = 1]
+ 11:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+ 12:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+ 13:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 14:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+ 15:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
 		dirR2 = 1
 
- 41:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
- 42:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 21)	[posR2 = (posR2+1)]
-		posR2 = 2
+ 16:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
 
- 43:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[(1)]
+ 17:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
 
- 44:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
- 45:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
- 46:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 11)	[posR1 = (posR1-1)]
-		posR1 = 1
-
- 47:	proc  0 (:init::1) ModeleCentralise.pml:21 (state 13)	[(1)]
-
- 48:	proc  0 (:init::1) ModeleCentralise.pml:43 (state 35)	[.(goto)]
-
- 49:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
- 50:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 29)	[dirR2 = -(1)]
-		dirR2 = -1
-
--------------
-depth-limit (-u50 steps) reached
-#processes: 1
-		NS = 2
-		NT = 1
-		posR1 = 1
-		posR2 = 2
+ 18:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
 		dirR1 = -1
+
+ 19:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 20:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+ 21:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+ 22:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+ 23:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 24:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+ 25:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+ 26:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+ 27:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 28:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+ 29:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+ 30:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 31:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+ 32:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
 		dirR2 = -1
- 50:	proc  0 (:init::1) ModeleCentralise.pml:14 (state 34)
-1 processes created
+
+ 33:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 34:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+ 35:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+ 36:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+ 37:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 38:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+ 39:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+ 40:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+ 41:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 42:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+ 43:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+ 44:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 45:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+ 46:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+ 47:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 48:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+ 49:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+ 50:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+ 51:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 52:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+ 53:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+ 54:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+ 55:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 56:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+ 57:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+ 58:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 59:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+ 60:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+ 61:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 62:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+ 63:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+ 64:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+ 65:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 66:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+ 67:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+ 68:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+ 69:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 70:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+ 71:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+ 72:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 73:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+ 74:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+ 75:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 76:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+ 77:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+ 78:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+ 79:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 80:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+ 81:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+ 82:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+ 83:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 84:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+ 85:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+ 86:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 87:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+ 88:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+ 89:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 90:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+ 91:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+ 92:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+ 93:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 94:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+ 95:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+ 96:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+ 97:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+ 98:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+ 99:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+100:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+101:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+102:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+103:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+104:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+105:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+106:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+107:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+108:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+109:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+110:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+111:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+112:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+113:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+114:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+115:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+116:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+117:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+118:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+119:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+120:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+121:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+122:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+123:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+124:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+125:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+126:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+127:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+128:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+129:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+130:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+131:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+132:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+133:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+134:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+135:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+136:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+137:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+138:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+139:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+140:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+141:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+142:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+143:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+144:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+145:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+146:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+147:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+148:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+149:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+150:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+151:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+152:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+153:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+154:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+155:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+156:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+157:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+158:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+159:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+160:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+161:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+162:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+163:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+164:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+165:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+166:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+167:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+168:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+169:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+170:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+171:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+172:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+173:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+174:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+175:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+176:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+177:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+178:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+179:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+180:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+181:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+182:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+183:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+184:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+185:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+186:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+187:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+188:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+189:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+190:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+191:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+192:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+193:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+194:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+195:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+196:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+197:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+198:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+199:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+200:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+201:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+202:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+203:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+204:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+205:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+206:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+207:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+208:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+209:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+210:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+211:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+212:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+213:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+214:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+215:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+216:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+217:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+218:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+219:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+220:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+221:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+222:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+223:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+224:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+225:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+226:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+227:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+228:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+229:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+230:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+231:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+232:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+233:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+234:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+235:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+236:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+237:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+238:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+239:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+240:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+241:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+242:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+243:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+244:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+245:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+246:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+247:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+248:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+249:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+250:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+251:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+252:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+253:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+254:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+255:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+256:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+257:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+258:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+259:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+260:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+261:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+262:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+263:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+264:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+265:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+266:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+267:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+268:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+269:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+270:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+271:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+272:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+273:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+274:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+275:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+276:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+277:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+278:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+279:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+280:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+281:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+282:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+283:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+284:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+285:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+286:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+287:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+288:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+289:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+290:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+291:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+292:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+293:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+294:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+295:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+296:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+297:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+298:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+299:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+300:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+301:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+302:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+303:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+304:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+305:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+306:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+307:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+308:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+309:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+310:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+311:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+312:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+313:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+314:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+315:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+316:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+317:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+318:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+319:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+320:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+321:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+322:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+323:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+324:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+325:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+326:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+327:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+328:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+329:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+330:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+331:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+332:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+333:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+334:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+335:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+336:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+337:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+338:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+339:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+340:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+341:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+342:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+343:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+344:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+345:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+346:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+347:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+348:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+349:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+350:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+351:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+352:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+353:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+354:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+355:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+356:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+357:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+358:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+359:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+360:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+361:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+362:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+363:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+364:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+365:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+366:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+367:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+368:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+369:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+370:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+371:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+372:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+373:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+374:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+375:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+376:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+377:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+378:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+379:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+380:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+381:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+382:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+383:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+384:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+385:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+386:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+387:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+388:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+389:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+390:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+391:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+392:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+393:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+394:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+395:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+396:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+397:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+398:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+399:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+400:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+401:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+402:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+403:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+404:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+405:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+406:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+407:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+408:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+409:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+410:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+411:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+412:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+413:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+414:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+415:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+416:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+417:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+418:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+419:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+420:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+421:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+422:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+423:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+424:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+425:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+426:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+427:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+428:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+429:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+430:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+431:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+432:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+433:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+434:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+435:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+436:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+437:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+438:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+439:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+440:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+441:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+442:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+443:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+444:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+445:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+446:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+447:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+448:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+449:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+450:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+451:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+452:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+453:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+454:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+455:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+456:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+457:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+458:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+459:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+460:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+461:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+462:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+463:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+464:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+465:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+466:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+467:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+468:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+469:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+470:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+471:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+472:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+473:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+474:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+475:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+476:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+477:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+478:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+479:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+480:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+481:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+482:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+483:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+484:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+485:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+486:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+487:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+488:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+489:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+490:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+491:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+492:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+493:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+494:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+495:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+496:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+497:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+498:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+499:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+500:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+501:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+502:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+503:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+504:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+505:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+506:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+507:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+508:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+509:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+510:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+511:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+512:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+513:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+514:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+515:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+516:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+517:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+518:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+519:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+520:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+521:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+522:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+523:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+524:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+525:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+526:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+527:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+528:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+529:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+530:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+531:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+532:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+533:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+534:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+535:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+536:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+537:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+538:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+539:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+540:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+541:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+542:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+543:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+544:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+545:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+546:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+547:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+548:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+549:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+550:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+551:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+552:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+553:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+554:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+555:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+556:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+557:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+558:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+559:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+560:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+561:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+562:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+563:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+564:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+565:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+566:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+567:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+568:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+569:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+570:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+571:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+572:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+573:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+574:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+575:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+576:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+577:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+578:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+579:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+580:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+581:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+582:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+583:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+584:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+585:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+586:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+587:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+588:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+589:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+590:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+591:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+592:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+593:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+594:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+595:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+596:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+597:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+598:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+599:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+600:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+601:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+602:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+603:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+604:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+605:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+606:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+607:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+608:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+609:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+610:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+611:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+612:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+613:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+614:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+615:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+616:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+617:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+618:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+619:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+620:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+621:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+622:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+623:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+624:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+625:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+626:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+627:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+628:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+629:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+630:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+631:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+632:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+633:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+634:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+635:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+636:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+637:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+638:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+639:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+640:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+641:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+642:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+643:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+644:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+645:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+646:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+647:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+648:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+649:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+650:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+651:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+652:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+653:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+654:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+655:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+656:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+657:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+658:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+659:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+660:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+661:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+662:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+663:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+664:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+665:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+666:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+667:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+668:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+669:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+670:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+671:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+672:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+673:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+674:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+675:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+676:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+677:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+678:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+679:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+680:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+681:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+682:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+683:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+684:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+685:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+686:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+687:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+688:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+689:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+690:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+691:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+692:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+693:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+694:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+695:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+696:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+697:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+698:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+699:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+700:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+701:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+702:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+703:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+704:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+705:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+706:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+707:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+708:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+709:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+710:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+711:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+712:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+713:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+714:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+715:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+716:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+717:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+718:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+719:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+720:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+721:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+722:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+723:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+724:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+725:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+726:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+727:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+728:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+729:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+730:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+731:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+732:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+733:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+734:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+735:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]
+		posR2 = 1
+
+736:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 26)	[(1)]
+
+737:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+738:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+739:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+740:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+741:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+742:	proc  0 (:init::1) ModeleCentralise.pml:39 (state 30)	[((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))]
+
+743:	proc  0 (:init::1) ModeleCentralise.pml:40 (state 31)	[dirR2 = 1]
+		dirR2 = 1
+
+744:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+745:	proc  0 (:init::1) ModeleCentralise.pml:23 (state 13)	[((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))]
+
+746:	proc  0 (:init::1) ModeleCentralise.pml:24 (state 14)	[dirR1 = -(1)]
+		dirR1 = -1
+
+747:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+748:	proc  0 (:init::1) ModeleCentralise.pml:19 (state 9)	[((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))]
+
+749:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 10)	[posR1 = (posR1-1)]
+		posR1 = 1
+
+750:	proc  0 (:init::1) ModeleCentralise.pml:20 (state 12)	[(1)]
+
+751:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+752:	proc  0 (:init::1) ModeleCentralise.pml:31 (state 19)	[((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))]
+
+753:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 20)	[posR2 = (posR2+1)]
+		posR2 = 2
+
+754:	proc  0 (:init::1) ModeleCentralise.pml:32 (state 22)	[(1)]
+
+755:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+756:	proc  0 (:init::1) ModeleCentralise.pml:25 (state 16)	[((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))]
+
+757:	proc  0 (:init::1) ModeleCentralise.pml:26 (state 17)	[dirR1 = 1]
+		dirR1 = 1
+
+758:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+759:	proc  0 (:init::1) ModeleCentralise.pml:37 (state 27)	[((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))]
+
+760:	proc  0 (:init::1) ModeleCentralise.pml:38 (state 28)	[dirR2 = -(1)]
+		dirR2 = -1
+
+761:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+762:	proc  0 (:init::1) ModeleCentralise.pml:17 (state 5)	[((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))]
+
+763:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 6)	[posR1 = (posR1+1)]
+		posR1 = 2
+
+764:	proc  0 (:init::1) ModeleCentralise.pml:18 (state 8)	[(1)]
+
+765:	proc  0 (:init::1) ModeleCentralise.pml:42 (state 34)	[.(goto)]
+
+766:	proc  0 (:init::1) ModeleCentralise.pml:33 (state 23)	[((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))]
+
+767:	proc  0 (:init::1) ModeleCentralise.pml:34 (state 24)	[posR2 = (posR2-1)]

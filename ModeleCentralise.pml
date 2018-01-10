@@ -1,19 +1,21 @@
 /* Ligne 14 a 1 seul processus */
-int NS = 2; /* Stations */
+int NS = 8; /* Stations */
 int NT = NS - 1; /* Troncons */
-int posR1, posR2; /* Positions 0 a NS */
-int dirR1, dirR2; /* Directions -1 Ouest *** 1 est */
+
+/* Positions 0 a NS */
+int dirR1 = 1;  /* Est */
+int dirR2 = -1; /* Ouest */
+
+/* Directions -1 Ouest *** 1 est */
+int posR1 = 1;
+int posR2 = NS;
 
 init {
-	dirR1 = 1;  /* Est */
-	dirR2 = -1; /* Ouest */
-	posR1 = 1;
-	posR2 = NS;
-
+	end:
 	do
 		/* Rame 1 */
 		/* Arrivee Station Suivante */
-		/* Progress au moment de avancer*/
+		/* Progress au moment d'avancer*/
 		:: atomic{dirR1==1 && (posR2!=posR1+1  || dirR1 != dirR2) && posR1<NS 
 				-> posR1 = posR1 + 1;} progress0 : skip
 		:: atomic{dirR1==-1 && (posR2!=posR1-1  || dirR1 != dirR2) && posR1>1
@@ -27,7 +29,7 @@ init {
 		
 		/* Rame 2 */	
 		/* Arrivee Station Suivante */
-		/* Progress au moment de avancer*/
+		/* Progress au moment d'avancer*/
 		:: atomic{dirR2==1 && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
 				-> posR2 = posR2 + 1;} progress2 : skip
 		:: atomic{dirR2==-1 && (posR1!=posR2-1  || dirR1 != dirR2) && posR2>1
@@ -41,4 +43,14 @@ init {
 	od ;
 }
 
-
+ltl p0 {[]((posR1 != posR2) || (dirR1 != dirR2))};
+/* p1 mot end*/
+/* p2 mot progress*/
+ltl p3 {[](posR1!=1 && dirR1==-1 -> (dirR1==-1 U (posR1==1 && dirR1==1))) &&
+		[](posR2!=1 && dirR2==-1 -> (dirR2==-1 U (posR2==1 && dirR2==1))) &&
+		[](posR1!=NS && dirR1==1 -> (dirR1==1 U (posR1==NS && dirR1==-1))) &&
+		[](posR2!=NS && dirR2==1 -> (dirR2==1 U (posR2==NS && dirR2==-1)))};
+ltl p6 {[]<>(posR1 >= 1 && posR1 <= NS) &&
+		[]<>(dirR1 == 1 || dirR1 == -1) &&
+		[]<>(posR2 >= 1 && posR2 <= NS) &&
+		[]<>(dirR2 == 1 || dirR2 == -1) &&}

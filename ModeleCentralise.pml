@@ -50,6 +50,14 @@ ltl p3 {[](posR1 != 1 && dirR1 == -1 -> (dirR1 == -1 U (posR1 == 1 && dirR1 == 1
 		[](posR1 != NS && dirR1 == 1 -> (dirR1 == 1 U (posR1 == NS && dirR1 == -1))) &&
 		[](posR2 != NS && dirR2 == 1 -> (dirR2 == 1 U (posR2 == NS && dirR2 == -1)))};
 		
+ltl p4{[](posR1 < NS && dirR1 == 1 -> <>(posR1 == NS)) &&
+	   [](posR1 > 1 && dirR1 == -1 -> <>(posR1 == 1)) &&
+	   [](posR2 < NS && dirR2 == 1 -> <>(posR2 == NS)) &&
+	   [](posR2 > 1 && dirR2 == -1 -> <>(posR2 == 1))};
+
+ltl p5{[](posR1 < NS-1 && dirR1 == 1 -> <>(posR1 == NS-1)) &&
+	   [](posR2 < NS-1 && dirR2 == 1 -> <>(posR2 == NS-1))};
+		
 ltl p6 {[]<>(posR1 >= 1 && posR1 <= NS) &&
 		[]<>(dirR1 == 1 || dirR1 == -1) &&
 		[]<>(posR2 >= 1 && posR2 <= NS) &&

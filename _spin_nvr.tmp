@@ -40,6 +40,48 @@ accept_S22:
 accept_all:
 	skip
 }
+never p4 {    /* !(((([] ((! (((posR1<NS)) && ((dirR1==1)))) || (<> ((posR1==NS))))) && ([] ((! (((posR1>1)) && ((dirR1==-(1))))) || (<> ((posR1==1)))))) && ([] ((! (((posR2<NS)) && ((dirR2==1)))) || (<> ((posR2==NS)))))) && ([] ((! (((posR2>1)) && ((dirR2==-(1))))) || (<> ((posR2==1)))))) */
+T0_init:
+	do
+	:: (! ((! (((posR2<NS)) && ((dirR2==1))))) && ! (((posR2==NS))) && ((! ((! (((posR1<NS)) && ((dirR1==1)))))) || (((! ((! (((posR1>1)) && ((dirR1==-(1))))))) || (((! ((! (((posR2<NS)) && ((dirR2==1)))))) || (! ((! (((posR2>1)) && ((dirR2==-(1))))))))))))) -> goto accept_S7
+	:: (! ((! (((posR2>1)) && ((dirR2==-(1)))))) && ! (((posR2==1))) && ((! ((! (((posR1<NS)) && ((dirR1==1)))))) || (((! ((! (((posR1>1)) && ((dirR1==-(1))))))) || (((! ((! (((posR2<NS)) && ((dirR2==1)))))) || (! ((! (((posR2>1)) && ((dirR2==-(1))))))))))))) -> goto accept_S12
+	:: (! ((! (((posR1<NS)) && ((dirR1==1))))) && ! (((posR1==NS)))) -> goto accept_S17
+	:: (! ((! (((posR1>1)) && ((dirR1==-(1)))))) && ! (((posR1==1)))) -> goto accept_S22
+	:: (1) -> goto T0_init
+	od;
+accept_S7:
+	do
+	:: (! (((posR2==NS)))) -> goto accept_S7
+	od;
+accept_S12:
+	do
+	:: (! (((posR2==1)))) -> goto accept_S12
+	od;
+accept_S17:
+	do
+	:: (! (((posR1==NS)))) -> goto accept_S17
+	od;
+accept_S22:
+	do
+	:: (! (((posR1==1)))) -> goto accept_S22
+	od;
+}
+never p5 {    /* !(([] ((! (((posR1<(NS-1))) && ((dirR1==1)))) || (<> ((posR1==(NS-1)))))) && ([] ((! (((posR2<(NS-1))) && ((dirR2==1)))) || (<> ((posR2==(NS-1))))))) */
+T0_init:
+	do
+	:: (! ((! (((posR2<(NS-1))) && ((dirR2==1))))) && ! (((posR2==(NS-1))))) -> goto accept_S5
+	:: (! ((! (((posR1<(NS-1))) && ((dirR1==1))))) && ! (((posR1==(NS-1))))) -> goto accept_S10
+	:: (1) -> goto T0_init
+	od;
+accept_S5:
+	do
+	:: (! (((posR2==(NS-1))))) -> goto accept_S5
+	od;
+accept_S10:
+	do
+	:: (! (((posR1==(NS-1))))) -> goto accept_S10
+	od;
+}
 never p6 {    /* !(((([] (<> (((posR1>=1)) && ((posR1<=NS))))) && ([] (<> (((dirR1==1)) || ((dirR1==-(1))))))) && ([] (<> (((posR2>=1)) && ((posR2<=NS)))))) && ([] (<> (((dirR2==1)) || ((dirR2==-(1))))))) */
 T0_init:
 	do

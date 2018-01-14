@@ -1,12 +1,12 @@
-/* Ligne 14 a 1 seul processus */
+/* Ligne 14 avec 1 seul processus */
 int NS = 8; /* Stations */
 int NT = NS - 1; /* Troncons */
 
-/* Positions 0 a NS */
+/* Positions : 0 a NS */
 int dirR1 = 1;  /* Est */
 int dirR2 = -1; /* Ouest */
 
-/* Directions -1 Ouest *** 1 est */
+/* Directions : -1 Ouest *** 1 est */
 int posR1 = 1;
 int posR2 = NS;
 

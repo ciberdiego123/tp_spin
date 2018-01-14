@@ -1,4 +1,4 @@
-/* Ligne 14 a 1 seul processus */
+/* Ligne 14 avec 2 processus */
 int NS = 2; /* Stations */
 int NT = NS - 1; /* Troncons */
 chan ReqR1 = [1] of {bit};
@@ -8,14 +8,14 @@ chan R1ToR2 = [1] of {int, int};
 chan R2ToR1 = [1] of {int, int};
 
 proctype Rame1(){
-	int posR1 = 1;  /* Position 0 a NS */
-	int dirR1 = 1;  /* Direction -1 Ouest *** 1 est */
-	int posR2 = NS; /* Position 0 a NS */
-	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
+	int posR1 = 1;  /* Position : 0 a NS */
+	int dirR1 = 1;  /* Direction : -1 Ouest *** 1 est */
+	int posR2 = NS; /* Position : 0 a NS */
+	int dirR2 = -1; /* Direction : -1 Ouest *** 1 est */
 	end:
 	do
 	/* Rame 1 */
-	/* Progress au moment de avancer*/
+	/* Progress au moment d'avancer*/
 	/* Arrivee Station Suivante */
 	:: atomic{dirR1==1 && (posR2!=posR1+1  || dirR1 != dirR2) && posR1<NS 
 			-> posR1 = posR1 + 1;} progress0 : skip
@@ -43,14 +43,14 @@ proctype Rame1(){
 }
 
 proctype Rame2(){
-	int posR1 = 1;  /* Position 0 a NS */
-	int dirR1 = 1;  /* Direction -1 Ouest *** 1 est */
-	int posR2 = NS; /* Position 0 a NS */
-	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
+	int posR1 = 1;  /* Position : 0 a NS */
+	int dirR1 = 1;  /* Direction : -1 Ouest *** 1 est */
+	int posR2 = NS; /* Position : 0 a NS */
+	int dirR2 = -1; /* Direction : -1 Ouest *** 1 est */
 	end:
 	do
 	/* Rame 2 */	
-	/* Progress au moment de avancer*/
+	/* Progress au moment d'avancer*/
 	/* Arrivee Station Suivante */
 	:: atomic{dirR2==1 && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
 			-> posR2 = posR2 + 1;} progress4 :skip

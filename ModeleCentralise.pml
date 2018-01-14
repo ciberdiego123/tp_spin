@@ -23,23 +23,23 @@ init {
 			
 		/* Changement Direction */
 		:: atomic{dirR1==1 && posR1==NS && (posR2!=posR1  || dirR2 != -1)
-				-> dirR1 = -1;}
+				-> dirR1 = -1;} progress3 : skip
 		:: atomic{dirR1==-1 && posR1==1 && (posR2!=posR1  || dirR2 != 1)
-				-> dirR1 = 1;}
+				-> dirR1 = 1;} progress4 : skip
 		
 		/* Rame 2 */	
 		/* Arrivee Station Suivante */
 		/* Progress au moment d'avancer*/
 		:: atomic{dirR2==1 && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
-				-> posR2 = posR2 + 1;} progress2 : skip
+				-> posR2 = posR2 + 1;} progress5 : skip
 		:: atomic{dirR2==-1 && (posR1!=posR2-1  || dirR1 != dirR2) && posR2>1
-				-> posR2 = posR2 - 1;} progress3 : skip
+				-> posR2 = posR2 - 1;} progress6 : skip
 			
 		/* Changement Direction */
 		:: atomic{dirR2==1 && posR2==NS && (posR2!=posR1  || dirR1 != -1)
-				-> dirR2 = -1;}
+				-> dirR2 = -1;} progress7 : skip
 		:: atomic{dirR2==-1 && posR2==1 && (posR2!=posR1  || dirR1 != 1)
-				-> dirR2 = 1;}
+				-> dirR2 = 1;} progress8 : skip
 	od ;
 }
 

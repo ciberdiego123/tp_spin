@@ -1,8 +1,8 @@
 /* Ligne 14 a 1 seul processus */
 int NS = 2; /* Stations */
 int NT = NS - 1; /* Troncons */
-chan ReqR1 = [0] of {bit};
-chan ReqR2 = [0] of {bit};
+chan ReqR1 = [1] of {bit};
+chan ReqR2 = [1] of {bit};
 /*  Position(0-NS), Direction(-1,1) */
 chan R1ToR2 = [1] of {int, int}; 
 chan R2ToR1 = [1] of {int, int};
@@ -24,15 +24,20 @@ proctype Rame1(){
 		
 	/* Changement Direction */
 	:: atomic{dirR1==1 && posR1==NS && (posR2!=posR1  || dirR2 != -1)
-			-> dirR1 = -1;}
+			-> dirR1 = -1;} progress2 : skip
 	:: atomic{dirR1==-1 && posR1==1 && (posR2!=posR1  || dirR2 != 1)
-			-> dirR1 = 1;}
+			-> dirR1 = 1;} progress3 : skip
 					
 	/* Requete de donnees */
-	:: atomic{ReqR2!1; R2ToR1?posR2,dirR2;}
+	:: atomic{((dirR1==1 && (posR2==posR1+1  && dirR1 == dirR2))	||
+			(dirR1==-1 && (posR2==posR1-1  && dirR1 == dirR2)) ||
+			(dirR1==1 && posR1==NS && (posR2==posR1  && dirR2 == -1)) ||
+			(dirR1==-1 && posR1==1 && (posR2==posR1  && dirR2 == 1))) &&
+			empty(ReqR1)
+			-> ReqR2!1; R2ToR1?posR2,dirR2;}
 	
 	/* Reponse a la requete*/
-	:: atomic{ReqR1?1; R1ToR2!posR1,dirR1;}
+	:: atomic{full(ReqR1) -> ReqR1?1; R1ToR2!posR1,dirR1;}
 	
 	od;
 }
@@ -48,21 +53,26 @@ proctype Rame2(){
 	/* Progress au moment de avancer*/
 	/* Arrivee Station Suivante */
 	:: atomic{dirR2==1 && (posR1!=posR2+1  || dirR1 != dirR2) && posR2<NS 
-			-> posR2 = posR2 + 1;} progress2:skip
+			-> posR2 = posR2 + 1;} progress4 :skip
 	:: atomic{dirR2==-1 && (posR1!=posR2-1  || dirR1 != dirR2) && posR2>1
-			-> posR2 = posR2 - 1;} progress3 : skip
+			-> posR2 = posR2 - 1;} progress5 : skip
 		
 	/* Changement Direction */
 	:: atomic{dirR2==1 && posR2==NS && (posR2!=posR1  || dirR1 != -1)
-			-> dirR2 = -1;}
+			-> dirR2 = -1;} progress6 : skip
 	:: atomic{dirR2==-1 && posR2==1 && (posR2!=posR1  || dirR1 != 1)
-			-> dirR2 = 1;}
+			-> dirR2 = 1;} progress7 : skip;
 			
 	/* Requete de donnees */
-	:: atomic{ReqR1!1; R1ToR2?posR1,dirR1;} 
+	:: atomic{((dirR2==1 && (posR1==posR2+1  && dirR1 == dirR2))	|| 
+			(dirR2==-1 && (posR1==posR2-1  && dirR1 == dirR2)) ||
+			(dirR2==1 && posR2==NS && (posR2==posR1  && dirR1 == -1)) ||
+			(dirR2==-1 && posR2==1 && (posR2==posR1  && dirR1 == 1))) &&
+			empty(ReqR2)
+			-> ReqR1!1; R1ToR2?posR1,dirR1;} 
 	
 	/* Reponse a la requete*/
-	:: atomic{ReqR2?1; R2ToR1!posR2,dirR2;}
+	:: atomic{full(ReqR2) -> ReqR2?1; R2ToR1!posR2,dirR2;}
 	
 	od;
 }

@@ -1,12 +1,3 @@
-never pp {    /* !([] ((Rame1:posR1>=1))) */
-T0_init:
-	do
-	:: atomic { (! (((Rame1:posR1>=1)))) -> assert(!(! (((Rame1:posR1>=1))))) }
-	:: (1) -> goto T0_init
-	od;
-accept_all:
-	skip
-}
 never p0 {    /* !([] (((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2)))) */
 T0_init:
 	do

@@ -20,7 +20,7 @@ proctype Rame1(){
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
 	bit lieuR2 = 1; /* Lieu de la position 1 Station *** 0 Troncon */
 	mtype portesR2 = fermees; /* Etat des portes */
-	
+	end:
 	do
 	/* Rame 1 */
 	/* Progress au moment de avancer*/
@@ -67,7 +67,7 @@ proctype Rame2(){
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
 	bit lieuR2 = 1; /* Lieu de la position 1 Station *** 0 Troncon */
 	mtype portesR2 = fermees; /* Etat des portes */
-	
+	end:
 	do
 	/* Rame 2 */	
 	/* Progress au moment de avancer*/
@@ -107,7 +107,7 @@ proctype Rame2(){
 }
 
 init {
-	atomic{
+	atomic{	
 		run Rame1();
 		run Rame2(); 
 	}

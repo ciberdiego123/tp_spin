@@ -1,0 +1,26 @@
+"gcc-4" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"gcc-3" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+ltl p0: [] (((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2)))
+ltl p3: ((([] ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1))))) || (((Rame1:dirR1==-(1))) U (((Rame1:posR1==1)) && ((Rame1:dirR1==1)))))) && ([] ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1))))) || (((Rame2:dirR2==-(1))) U (((Rame2:posR2==1)) && ((Rame2:dirR2==1))))))) && ([] ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1)))) || (((Rame1:dirR1==1)) U (((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1)))))))) && ([] ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1)))) || (((Rame2:dirR2==1)) U (((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1)))))))
+ltl p4: ((([] ((! (((Rame1:posR1<NS)) && ((Rame1:dirR1==1)))) || (<> ((Rame1:posR1==NS))))) && ([] ((! (((Rame1:posR1>1)) && ((Rame1:dirR1==-(1))))) || (<> ((Rame1:posR1==1)))))) && ([] ((! (((Rame2:posR2<NS)) && ((Rame2:dirR2==1)))) || (<> ((Rame2:posR2==NS)))))) && ([] ((! (((Rame2:posR2>1)) && ((Rame2:dirR2==-(1))))) || (<> ((Rame2:posR2==1)))))
+ltl p5: ([] ((! (((Rame1:posR1<(NS-1))) && ((Rame1:dirR1==1)))) || (<> ((Rame1:posR1==(NS-1)))))) && ([] ((! (((Rame2:posR2<(NS-1))) && ((Rame2:dirR2==1)))) || (<> ((Rame2:posR2==(NS-1))))))
+ltl p6: ((([] (<> (((Rame1:posR1>=1)) && ((Rame1:posR1<=NS))))) && ([] (<> (((Rame1:dirR1==1)) || ((Rame1:dirR1==-(1))))))) && ([] (<> (((Rame2:posR2>=1)) && ((Rame2:posR2<=NS)))))) && ([] (<> (((Rame2:dirR2==1)) || ((Rame2:dirR2==-(1))))))
+spin: Modele2Processus.pml:0, warning, global, 'int   NT' variable is never used (other than in print stmnts)
+starting claim 3
+using statement merging
+MSC: ~G line 3
+  1:	proc  - (p0:1) _spin_nvr.tmp:3 (state 1)	[(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2))))]	<merge 0 now @2>
+		NS = 2
+		NT = 1
+
+spin: _spin_nvr.tmp:3, Error: assertion violated
+spin: text of failed assertion: assert(!(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2)))))
+#processes: 1
+		NS = 2
+		NT = 1
+  1:	proc  0 (:init::1) Modele2Processus.pml:71 (state 3)
+  1:	proc  - (p0:1) _spin_nvr.tmp:3 (state 2)
+1 processes created
+Exit-Status 0

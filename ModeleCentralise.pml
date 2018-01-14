@@ -62,4 +62,3 @@ ltl p6 {[]<>(posR1 >= 1 && posR1 <= NS) &&
 		[]<>(dirR1 == 1 || dirR1 == -1) &&
 		[]<>(posR2 >= 1 && posR2 <= NS) &&
 		[]<>(dirR2 == 1 || dirR2 == -1)};
-		

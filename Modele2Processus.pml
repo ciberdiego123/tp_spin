@@ -12,7 +12,7 @@ proctype Rame1(){
 	int dirR1 = 1;  /* Direction -1 Ouest *** 1 est */
 	int posR2 = NS; /* Position 0 a NS */
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
-	
+	end:
 	do
 	/* Rame 1 */
 	/* Progress au moment de avancer*/
@@ -42,7 +42,7 @@ proctype Rame2(){
 	int dirR1 = 1;  /* Direction -1 Ouest *** 1 est */
 	int posR2 = NS; /* Position 0 a NS */
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
-	
+	end:
 	do
 	/* Rame 2 */	
 	/* Progress au moment de avancer*/
@@ -73,3 +73,23 @@ init {
 		run Rame2(); 
 	}
 }
+
+ltl p0 {[]((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2))};
+
+ltl p3 {[](Rame1:posR1 != 1 && Rame1:dirR1 == -1 -> (Rame1:dirR1 == -1 U (Rame1:posR1 == 1 && Rame1:dirR1 == 1))) &&
+		[](Rame2:posR2 != 1 && Rame2:dirR2 == -1 -> (Rame2:dirR2 == -1 U (Rame2:posR2 == 1 && Rame2:dirR2 == 1))) &&
+		[](Rame1:posR1 != NS && Rame1:dirR1 == 1 -> (Rame1:dirR1 == 1 U (Rame1:posR1 == NS && Rame1:dirR1 == -1))) &&
+		[](Rame2:posR2 != NS && Rame2:dirR2 == 1 -> (Rame2:dirR2 == 1 U (Rame2:posR2 == NS && Rame2:dirR2 == -1)))};
+		
+ltl p4{[](Rame1:posR1 < NS && Rame1:dirR1 == 1 -> <>(Rame1:posR1 == NS)) &&
+	   [](Rame1:posR1 > 1 && Rame1:dirR1 == -1 -> <>(Rame1:posR1 == 1)) &&
+	   [](Rame2:posR2 < NS && Rame2:dirR2 == 1 -> <>(Rame2:posR2 == NS)) &&
+	   [](Rame2:posR2 > 1 && Rame2:dirR2 == -1 -> <>(Rame2:posR2 == 1))};
+
+ltl p5{[](Rame1:posR1 < NS-1 && Rame1:dirR1 == 1 -> <>(Rame1:posR1 == NS-1)) &&
+	   [](Rame2:posR2 < NS-1 && Rame2:dirR2 == 1 -> <>(Rame2:posR2 == NS-1))};
+		
+ltl p6 {[]<>(Rame1:posR1 >= 1 && Rame1:posR1 <= NS) &&
+		[]<>(Rame1:dirR1 == 1 || Rame1:dirR1 == -1) &&
+		[]<>(Rame2:posR2 >= 1 && Rame2:posR2 <= NS) &&
+		[]<>(Rame2:dirR2 == 1 || Rame2:dirR2 == -1)};

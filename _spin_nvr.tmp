@@ -1,110 +1,110 @@
-never p0 {    /* !([] (((posR1!=posR2)) || ((dirR1!=dirR2)))) */
+never p0 {    /* !([] (((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2)))) */
 T0_init:
 	do
-	:: atomic { (! ((((posR1!=posR2)) || ((dirR1!=dirR2))))) -> assert(!(! ((((posR1!=posR2)) || ((dirR1!=dirR2)))))) }
+	:: atomic { (! ((((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2))))) -> assert(!(! ((((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2)))))) }
 	:: (1) -> goto T0_init
 	od;
 accept_all:
 	skip
 }
-never p3 {    /* !(((([] ((! (((posR1!=1)) && ((dirR1==-(1))))) || (((dirR1==-(1))) U (((posR1==1)) && ((dirR1==1)))))) && ([] ((! (((posR2!=1)) && ((dirR2==-(1))))) || (((dirR2==-(1))) U (((posR2==1)) && ((dirR2==1))))))) && ([] ((! (((posR1!=NS)) && ((dirR1==1)))) || (((dirR1==1)) U (((posR1==NS)) && ((dirR1==-(1)))))))) && ([] ((! (((posR2!=NS)) && ((dirR2==1)))) || (((dirR2==1)) U (((posR2==NS)) && ((dirR2==-(1)))))))) */
+never p3 {    /* !(((([] ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1))))) || (((Rame1:dirR1==-(1))) U (((Rame1:posR1==1)) && ((Rame1:dirR1==1)))))) && ([] ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1))))) || (((Rame2:dirR2==-(1))) U (((Rame2:posR2==1)) && ((Rame2:dirR2==1))))))) && ([] ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1)))) || (((Rame1:dirR1==1)) U (((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1)))))))) && ([] ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1)))) || (((Rame2:dirR2==1)) U (((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1)))))))) */
 T0_init:
 	do
-	:: (! ((! (((posR2!=NS)) && ((dirR2==1))))) && ! ((((posR2==NS)) && ((dirR2==-(1))))) && ((! ((! (((posR1!=1)) && ((dirR1==-(1))))))) || (((! ((! (((posR1!=NS)) && ((dirR1==1)))))) || (((! ((! (((posR2!=1)) && ((dirR2==-(1))))))) || (! ((! (((posR2!=NS)) && ((dirR2==1)))))))))))) -> goto accept_S7
-	:: atomic { (((! ((! (((posR1!=1)) && ((dirR1==-(1)))))) && ! ((((posR1==1)) && ((dirR1==1)))) && ! (((dirR1==-(1))))) || (((! ((! (((posR1!=NS)) && ((dirR1==1))))) && ! ((((posR1==NS)) && ((dirR1==-(1))))) && ! (((dirR1==1)))) || (((! ((! (((posR2!=1)) && ((dirR2==-(1)))))) && ! ((((posR2==1)) && ((dirR2==1)))) && ! (((dirR2==-(1))))) || (! ((! (((posR2!=NS)) && ((dirR2==1))))) && ! ((((posR2==NS)) && ((dirR2==-(1))))) && ! (((dirR2==1)))))))))) -> assert(!(((! ((! (((posR1!=1)) && ((dirR1==-(1)))))) && ! ((((posR1==1)) && ((dirR1==1)))) && ! (((dirR1==-(1))))) || (((! ((! (((posR1!=NS)) && ((dirR1==1))))) && ! ((((posR1==NS)) && ((dirR1==-(1))))) && ! (((dirR1==1)))) || (((! ((! (((posR2!=1)) && ((dirR2==-(1)))))) && ! ((((posR2==1)) && ((dirR2==1)))) && ! (((dirR2==-(1))))) || (! ((! (((posR2!=NS)) && ((dirR2==1))))) && ! ((((posR2==NS)) && ((dirR2==-(1))))) && ! (((dirR2==1))))))))))) }
-	:: (! ((! (((posR2!=1)) && ((dirR2==-(1)))))) && ! ((((posR2==1)) && ((dirR2==1)))) && ((! ((! (((posR1!=1)) && ((dirR1==-(1))))))) || (((! ((! (((posR1!=NS)) && ((dirR1==1)))))) || (((! ((! (((posR2!=1)) && ((dirR2==-(1))))))) || (! ((! (((posR2!=NS)) && ((dirR2==1)))))))))))) -> goto accept_S12
-	:: (! ((! (((posR1!=NS)) && ((dirR1==1))))) && ! ((((posR1==NS)) && ((dirR1==-(1)))))) -> goto accept_S17
-	:: (! ((! (((posR1!=1)) && ((dirR1==-(1)))))) && ! ((((posR1==1)) && ((dirR1==1))))) -> goto accept_S22
+	:: (! ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1))))) && ! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1))))) && ((! ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1))))))) || (((! ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1)))))) || (((! ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1))))))) || (! ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1)))))))))))) -> goto accept_S7
+	:: atomic { (((! ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1)))))) && ! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1)))) && ! (((Rame1:dirR1==-(1))))) || (((! ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1))))) && ! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1))))) && ! (((Rame1:dirR1==1)))) || (((! ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1)))))) && ! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1)))) && ! (((Rame2:dirR2==-(1))))) || (! ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1))))) && ! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1))))) && ! (((Rame2:dirR2==1)))))))))) -> assert(!(((! ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1)))))) && ! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1)))) && ! (((Rame1:dirR1==-(1))))) || (((! ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1))))) && ! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1))))) && ! (((Rame1:dirR1==1)))) || (((! ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1)))))) && ! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1)))) && ! (((Rame2:dirR2==-(1))))) || (! ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1))))) && ! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1))))) && ! (((Rame2:dirR2==1))))))))))) }
+	:: (! ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1)))))) && ! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1)))) && ((! ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1))))))) || (((! ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1)))))) || (((! ((! (((Rame2:posR2!=1)) && ((Rame2:dirR2==-(1))))))) || (! ((! (((Rame2:posR2!=NS)) && ((Rame2:dirR2==1)))))))))))) -> goto accept_S12
+	:: (! ((! (((Rame1:posR1!=NS)) && ((Rame1:dirR1==1))))) && ! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1)))))) -> goto accept_S17
+	:: (! ((! (((Rame1:posR1!=1)) && ((Rame1:dirR1==-(1)))))) && ! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1))))) -> goto accept_S22
 	:: (1) -> goto T0_init
 	od;
 accept_S7:
 	do
-	:: (! ((((posR2==NS)) && ((dirR2==-(1)))))) -> goto accept_S7
-	:: atomic { (! ((((posR2==NS)) && ((dirR2==-(1))))) && ! (((dirR2==1)))) -> assert(!(! ((((posR2==NS)) && ((dirR2==-(1))))) && ! (((dirR2==1))))) }
+	:: (! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1)))))) -> goto accept_S7
+	:: atomic { (! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1))))) && ! (((Rame2:dirR2==1)))) -> assert(!(! ((((Rame2:posR2==NS)) && ((Rame2:dirR2==-(1))))) && ! (((Rame2:dirR2==1))))) }
 	od;
 accept_S12:
 	do
-	:: (! ((((posR2==1)) && ((dirR2==1))))) -> goto accept_S12
-	:: atomic { (! ((((posR2==1)) && ((dirR2==1)))) && ! (((dirR2==-(1))))) -> assert(!(! ((((posR2==1)) && ((dirR2==1)))) && ! (((dirR2==-(1)))))) }
+	:: (! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1))))) -> goto accept_S12
+	:: atomic { (! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1)))) && ! (((Rame2:dirR2==-(1))))) -> assert(!(! ((((Rame2:posR2==1)) && ((Rame2:dirR2==1)))) && ! (((Rame2:dirR2==-(1)))))) }
 	od;
 accept_S17:
 	do
-	:: (! ((((posR1==NS)) && ((dirR1==-(1)))))) -> goto accept_S17
-	:: atomic { (! ((((posR1==NS)) && ((dirR1==-(1))))) && ! (((dirR1==1)))) -> assert(!(! ((((posR1==NS)) && ((dirR1==-(1))))) && ! (((dirR1==1))))) }
+	:: (! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1)))))) -> goto accept_S17
+	:: atomic { (! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1))))) && ! (((Rame1:dirR1==1)))) -> assert(!(! ((((Rame1:posR1==NS)) && ((Rame1:dirR1==-(1))))) && ! (((Rame1:dirR1==1))))) }
 	od;
 accept_S22:
 	do
-	:: (! ((((posR1==1)) && ((dirR1==1))))) -> goto accept_S22
-	:: atomic { (! ((((posR1==1)) && ((dirR1==1)))) && ! (((dirR1==-(1))))) -> assert(!(! ((((posR1==1)) && ((dirR1==1)))) && ! (((dirR1==-(1)))))) }
+	:: (! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1))))) -> goto accept_S22
+	:: atomic { (! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1)))) && ! (((Rame1:dirR1==-(1))))) -> assert(!(! ((((Rame1:posR1==1)) && ((Rame1:dirR1==1)))) && ! (((Rame1:dirR1==-(1)))))) }
 	od;
 accept_all:
 	skip
 }
-never p4 {    /* !(((([] ((! (((posR1<NS)) && ((dirR1==1)))) || (<> ((posR1==NS))))) && ([] ((! (((posR1>1)) && ((dirR1==-(1))))) || (<> ((posR1==1)))))) && ([] ((! (((posR2<NS)) && ((dirR2==1)))) || (<> ((posR2==NS)))))) && ([] ((! (((posR2>1)) && ((dirR2==-(1))))) || (<> ((posR2==1)))))) */
+never p4 {    /* !(((([] ((! (((Rame1:posR1<NS)) && ((Rame1:dirR1==1)))) || (<> ((Rame1:posR1==NS))))) && ([] ((! (((Rame1:posR1>1)) && ((Rame1:dirR1==-(1))))) || (<> ((Rame1:posR1==1)))))) && ([] ((! (((Rame2:posR2<NS)) && ((Rame2:dirR2==1)))) || (<> ((Rame2:posR2==NS)))))) && ([] ((! (((Rame2:posR2>1)) && ((Rame2:dirR2==-(1))))) || (<> ((Rame2:posR2==1)))))) */
 T0_init:
 	do
-	:: (! ((! (((posR2<NS)) && ((dirR2==1))))) && ! (((posR2==NS))) && ((! ((! (((posR1<NS)) && ((dirR1==1)))))) || (((! ((! (((posR1>1)) && ((dirR1==-(1))))))) || (((! ((! (((posR2<NS)) && ((dirR2==1)))))) || (! ((! (((posR2>1)) && ((dirR2==-(1))))))))))))) -> goto accept_S7
-	:: (! ((! (((posR2>1)) && ((dirR2==-(1)))))) && ! (((posR2==1))) && ((! ((! (((posR1<NS)) && ((dirR1==1)))))) || (((! ((! (((posR1>1)) && ((dirR1==-(1))))))) || (((! ((! (((posR2<NS)) && ((dirR2==1)))))) || (! ((! (((posR2>1)) && ((dirR2==-(1))))))))))))) -> goto accept_S12
-	:: (! ((! (((posR1<NS)) && ((dirR1==1))))) && ! (((posR1==NS)))) -> goto accept_S17
-	:: (! ((! (((posR1>1)) && ((dirR1==-(1)))))) && ! (((posR1==1)))) -> goto accept_S22
+	:: (! ((! (((Rame2:posR2<NS)) && ((Rame2:dirR2==1))))) && ! (((Rame2:posR2==NS))) && ((! ((! (((Rame1:posR1<NS)) && ((Rame1:dirR1==1)))))) || (((! ((! (((Rame1:posR1>1)) && ((Rame1:dirR1==-(1))))))) || (((! ((! (((Rame2:posR2<NS)) && ((Rame2:dirR2==1)))))) || (! ((! (((Rame2:posR2>1)) && ((Rame2:dirR2==-(1))))))))))))) -> goto accept_S7
+	:: (! ((! (((Rame2:posR2>1)) && ((Rame2:dirR2==-(1)))))) && ! (((Rame2:posR2==1))) && ((! ((! (((Rame1:posR1<NS)) && ((Rame1:dirR1==1)))))) || (((! ((! (((Rame1:posR1>1)) && ((Rame1:dirR1==-(1))))))) || (((! ((! (((Rame2:posR2<NS)) && ((Rame2:dirR2==1)))))) || (! ((! (((Rame2:posR2>1)) && ((Rame2:dirR2==-(1))))))))))))) -> goto accept_S12
+	:: (! ((! (((Rame1:posR1<NS)) && ((Rame1:dirR1==1))))) && ! (((Rame1:posR1==NS)))) -> goto accept_S17
+	:: (! ((! (((Rame1:posR1>1)) && ((Rame1:dirR1==-(1)))))) && ! (((Rame1:posR1==1)))) -> goto accept_S22
 	:: (1) -> goto T0_init
 	od;
 accept_S7:
 	do
-	:: (! (((posR2==NS)))) -> goto accept_S7
+	:: (! (((Rame2:posR2==NS)))) -> goto accept_S7
 	od;
 accept_S12:
 	do
-	:: (! (((posR2==1)))) -> goto accept_S12
+	:: (! (((Rame2:posR2==1)))) -> goto accept_S12
 	od;
 accept_S17:
 	do
-	:: (! (((posR1==NS)))) -> goto accept_S17
+	:: (! (((Rame1:posR1==NS)))) -> goto accept_S17
 	od;
 accept_S22:
 	do
-	:: (! (((posR1==1)))) -> goto accept_S22
+	:: (! (((Rame1:posR1==1)))) -> goto accept_S22
 	od;
 }
-never p5 {    /* !(([] ((! (((posR1<(NS-1))) && ((dirR1==1)))) || (<> ((posR1==(NS-1)))))) && ([] ((! (((posR2<(NS-1))) && ((dirR2==1)))) || (<> ((posR2==(NS-1))))))) */
+never p5 {    /* !(([] ((! (((Rame1:posR1<(NS-1))) && ((Rame1:dirR1==1)))) || (<> ((Rame1:posR1==(NS-1)))))) && ([] ((! (((Rame2:posR2<(NS-1))) && ((Rame2:dirR2==1)))) || (<> ((Rame2:posR2==(NS-1))))))) */
 T0_init:
 	do
-	:: (! ((! (((posR2<(NS-1))) && ((dirR2==1))))) && ! (((posR2==(NS-1))))) -> goto accept_S5
-	:: (! ((! (((posR1<(NS-1))) && ((dirR1==1))))) && ! (((posR1==(NS-1))))) -> goto accept_S10
+	:: (! ((! (((Rame2:posR2<(NS-1))) && ((Rame2:dirR2==1))))) && ! (((Rame2:posR2==(NS-1))))) -> goto accept_S5
+	:: (! ((! (((Rame1:posR1<(NS-1))) && ((Rame1:dirR1==1))))) && ! (((Rame1:posR1==(NS-1))))) -> goto accept_S10
 	:: (1) -> goto T0_init
 	od;
 accept_S5:
 	do
-	:: (! (((posR2==(NS-1))))) -> goto accept_S5
+	:: (! (((Rame2:posR2==(NS-1))))) -> goto accept_S5
 	od;
 accept_S10:
 	do
-	:: (! (((posR1==(NS-1))))) -> goto accept_S10
+	:: (! (((Rame1:posR1==(NS-1))))) -> goto accept_S10
 	od;
 }
-never p6 {    /* !(((([] (<> (((posR1>=1)) && ((posR1<=NS))))) && ([] (<> (((dirR1==1)) || ((dirR1==-(1))))))) && ([] (<> (((posR2>=1)) && ((posR2<=NS)))))) && ([] (<> (((dirR2==1)) || ((dirR2==-(1))))))) */
+never p6 {    /* !(((([] (<> (((Rame1:posR1>=1)) && ((Rame1:posR1<=NS))))) && ([] (<> (((Rame1:dirR1==1)) || ((Rame1:dirR1==-(1))))))) && ([] (<> (((Rame2:posR2>=1)) && ((Rame2:posR2<=NS)))))) && ([] (<> (((Rame2:dirR2==1)) || ((Rame2:dirR2==-(1))))))) */
 T0_init:
 	do
-	:: (! ((((posR2>=1)) && ((posR2<=NS))))) -> goto accept_S7
-	:: (! ((((posR1>=1)) && ((posR1<=NS))))) -> goto accept_S12
-	:: (! ((((dirR2==1)) || ((dirR2==-(1)))))) -> goto accept_S17
-	:: (! ((((dirR1==1)) || ((dirR1==-(1)))))) -> goto accept_S22
+	:: (! ((((Rame2:posR2>=1)) && ((Rame2:posR2<=NS))))) -> goto accept_S7
+	:: (! ((((Rame2:dirR2==1)) || ((Rame2:dirR2==-(1)))))) -> goto accept_S12
+	:: (! ((((Rame1:posR1>=1)) && ((Rame1:posR1<=NS))))) -> goto accept_S17
+	:: (! ((((Rame1:dirR1==1)) || ((Rame1:dirR1==-(1)))))) -> goto accept_S22
 	:: (1) -> goto T0_init
 	od;
 accept_S7:
 	do
-	:: (! ((((posR2>=1)) && ((posR2<=NS))))) -> goto accept_S7
+	:: (! ((((Rame2:posR2>=1)) && ((Rame2:posR2<=NS))))) -> goto accept_S7
 	od;
 accept_S12:
 	do
-	:: (! ((((posR1>=1)) && ((posR1<=NS))))) -> goto accept_S12
+	:: (! ((((Rame2:dirR2==1)) || ((Rame2:dirR2==-(1)))))) -> goto accept_S12
 	od;
 accept_S17:
 	do
-	:: (! ((((dirR2==1)) || ((dirR2==-(1)))))) -> goto accept_S17
+	:: (! ((((Rame1:posR1>=1)) && ((Rame1:posR1<=NS))))) -> goto accept_S17
 	od;
 accept_S22:
 	do
-	:: (! ((((dirR1==1)) || ((dirR1==-(1)))))) -> goto accept_S22
+	:: (! ((((Rame1:dirR1==1)) || ((Rame1:dirR1==-(1)))))) -> goto accept_S22
 	od;
 }

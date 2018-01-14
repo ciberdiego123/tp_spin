@@ -19,7 +19,7 @@ proctype Rame1(){
 	int posR2 = NS; /* Position 0 a NS */
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
 	bit lieuR2 = 1; /* Lieu de la position 1 Station *** 0 Troncon */
-	mtype portesR2 = fermees; /* Etat des portes */
+	
 	end:
 	do
 	/* Rame 1 */
@@ -61,12 +61,12 @@ proctype Rame2(){
 	int posR1 = 1;  /* Position 0 a NS */
 	int dirR1 = 1;  /* Direction -1 Ouest *** 1 est */
 	bit lieuR1 = 1; /* Lieu de la position 1 Station *** 0 Troncon */
-	mtype portesR1 = fermees; /* Etat des portes */
 	
 	int posR2 = NS; /* Position 0 a NS */
 	int dirR2 = -1; /* Direction -1 Ouest *** 1 est */
 	bit lieuR2 = 1; /* Lieu de la position 1 Station *** 0 Troncon */
 	mtype portesR2 = fermees; /* Etat des portes */
+	
 	end:
 	do
 	/* Rame 2 */	
@@ -112,3 +112,29 @@ init {
 		run Rame2(); 
 	}
 }
+
+ltl p0 {[]((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2))};
+
+ltl p3 {[](Rame1:posR1 != 1 && Rame1:dirR1 == -1 -> (Rame1:dirR1 == -1 U (Rame1:posR1 == 1 && Rame1:dirR1 == 1))) &&
+		[](Rame2:posR2 != 1 && Rame2:dirR2 == -1 -> (Rame2:dirR2 == -1 U (Rame2:posR2 == 1 && Rame2:dirR2 == 1))) &&
+		[](Rame1:posR1 != NS && Rame1:dirR1 == 1 -> (Rame1:dirR1 == 1 U (Rame1:posR1 == NS && Rame1:dirR1 == -1))) &&
+		[](Rame2:posR2 != NS && Rame2:dirR2 == 1 -> (Rame2:dirR2 == 1 U (Rame2:posR2 == NS && Rame2:dirR2 == -1)))};
+		
+ltl p4{[](Rame1:posR1 < NS && Rame1:dirR1 == 1 -> <>(Rame1:posR1 == NS)) &&
+	   [](Rame1:posR1 > 1 && Rame1:dirR1 == -1 -> <>(Rame1:posR1 == 1)) &&
+	   [](Rame2:posR2 < NS && Rame2:dirR2 == 1 -> <>(Rame2:posR2 == NS)) &&
+	   [](Rame2:posR2 > 1 && Rame2:dirR2 == -1 -> <>(Rame2:posR2 == 1))};
+
+ltl p5{[](Rame1:posR1 < NS-1 && Rame1:dirR1 == 1 -> <>(Rame1:posR1 == NS-1)) &&
+	   [](Rame2:posR2 < NS-1 && Rame2:dirR2 == 1 -> <>(Rame2:posR2 == NS-1))};
+		
+ltl p6 {[]<>(Rame1:posR1 >= 1 && Rame1:posR1 <= NS) &&
+		[]<>(Rame1:dirR1 == 1 || Rame1:dirR1 == -1) &&
+		[]<>(Rame2:posR2 >= 1 && Rame2:posR2 <= NS) &&
+		[]<>(Rame2:dirR2 == 1 || Rame2:dirR2 == -1)};
+		
+ltl p7 {[](Rame1:lieuR1 == 0 -> Rame1:portesR1 == fermees) &&
+		[](Rame2:lieuR2 == 0 -> Rame2:portesR2 == fermees)};
+		
+ltl p8 {[]((Rame1:lieuR1 == 1 && Rame1:portesR1 == fermees) -> <>(Rame1:portesR1 == ouvertes)) &&
+		[]((Rame2:lieuR2 == 1 && Rame2:portesR2 == fermees) -> <>(Rame2:portesR2 == ouvertes))};

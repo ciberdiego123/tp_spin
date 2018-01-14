@@ -22,331 +22,463 @@ settable(void)
 {	Trans *T;
 	Trans *settr(int, int, int, int, int, char *, int, int, int);
 
-	trans = (Trans ***) emalloc(9*sizeof(Trans **));
+	trans = (Trans ***) emalloc(12*sizeof(Trans **));
 
-	/* proctype 7: p6 */
+	/* proctype 10: p8 */
 
-	trans[7] = (Trans **) emalloc(35*sizeof(Trans *));
+	trans[10] = (Trans **) emalloc(21*sizeof(Trans *));
 
-	trans[7][12]	= settr(177,0,11,1,0,".(goto)", 0, 2, 0);
-	T = trans[7][11] = settr(176,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(176,0,1,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(176,0,3,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(176,0,5,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(176,0,7,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(176,0,9,0,0,"DO", 0, 2, 0);
-	trans[7][1]	= settr(166,0,16,3,0,"(!(((Rame2.posR2>=1)&&(Rame2.posR2<=NS))))", 1, 2, 0);
-	trans[7][2]	= settr(167,0,16,1,0,"goto accept_S7", 0, 2, 0);
-	trans[7][3]	= settr(168,0,21,4,0,"(!(((Rame2.dirR2==1)||(Rame2.dirR2==-(1)))))", 1, 2, 0);
-	trans[7][4]	= settr(169,0,21,1,0,"goto accept_S12", 0, 2, 0);
-	trans[7][5]	= settr(170,0,26,5,0,"(!(((Rame1.posR1>=1)&&(Rame1.posR1<=NS))))", 1, 2, 0);
-	trans[7][6]	= settr(171,0,26,1,0,"goto accept_S17", 0, 2, 0);
-	trans[7][7]	= settr(172,0,31,6,0,"(!(((Rame1.dirR1==1)||(Rame1.dirR1==-(1)))))", 1, 2, 0);
-	trans[7][8]	= settr(173,0,31,1,0,"goto accept_S22", 0, 2, 0);
-	trans[7][9]	= settr(174,0,11,1,0,"(1)", 0, 2, 0);
-	trans[7][10]	= settr(175,0,11,1,0,"goto T0_init", 0, 2, 0);
-	trans[7][13]	= settr(178,0,16,1,0,"break", 0, 2, 0);
-	trans[7][17]	= settr(182,0,16,1,0,".(goto)", 0, 2, 0);
-	T = trans[7][16] = settr(181,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(181,0,14,0,0,"DO", 0, 2, 0);
-	trans[7][14]	= settr(179,0,16,7,0,"(!(((Rame2.posR2>=1)&&(Rame2.posR2<=NS))))", 1, 2, 0);
-	trans[7][15]	= settr(180,0,16,1,0,"goto accept_S7", 0, 2, 0);
-	trans[7][18]	= settr(183,0,21,1,0,"break", 0, 2, 0);
-	trans[7][22]	= settr(187,0,21,1,0,".(goto)", 0, 2, 0);
-	T = trans[7][21] = settr(186,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(186,0,19,0,0,"DO", 0, 2, 0);
-	trans[7][19]	= settr(184,0,21,8,0,"(!(((Rame2.dirR2==1)||(Rame2.dirR2==-(1)))))", 1, 2, 0);
-	trans[7][20]	= settr(185,0,21,1,0,"goto accept_S12", 0, 2, 0);
-	trans[7][23]	= settr(188,0,26,1,0,"break", 0, 2, 0);
-	trans[7][27]	= settr(192,0,26,1,0,".(goto)", 0, 2, 0);
-	T = trans[7][26] = settr(191,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(191,0,24,0,0,"DO", 0, 2, 0);
-	trans[7][24]	= settr(189,0,26,9,0,"(!(((Rame1.posR1>=1)&&(Rame1.posR1<=NS))))", 1, 2, 0);
-	trans[7][25]	= settr(190,0,26,1,0,"goto accept_S17", 0, 2, 0);
-	trans[7][28]	= settr(193,0,31,1,0,"break", 0, 2, 0);
-	trans[7][32]	= settr(197,0,31,1,0,".(goto)", 0, 2, 0);
-	T = trans[7][31] = settr(196,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(196,0,29,0,0,"DO", 0, 2, 0);
-	trans[7][29]	= settr(194,0,31,10,0,"(!(((Rame1.dirR1==1)||(Rame1.dirR1==-(1)))))", 1, 2, 0);
-	trans[7][30]	= settr(195,0,31,1,0,"goto accept_S22", 0, 2, 0);
-	trans[7][33]	= settr(198,0,34,1,0,"break", 0, 2, 0);
-	trans[7][34]	= settr(199,0,0,11,11,"-end-", 0, 3500, 0);
+	trans[10][8]	= settr(267,0,7,1,0,".(goto)", 0, 2, 0);
+	T = trans[10][7] = settr(266,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(266,0,1,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(266,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(266,0,5,0,0,"DO", 0, 2, 0);
+	trans[10][1]	= settr(260,0,12,3,0,"((!(!(((Rame2.lieuR2==1)&&(Rame2.portesR2==fermees))))&&!((Rame2.portesR2==ouvertes))))", 1, 2, 0);
+	trans[10][2]	= settr(261,0,12,1,0,"goto accept_S5", 0, 2, 0);
+	trans[10][3]	= settr(262,0,17,4,0,"((!(!(((Rame1.lieuR1==1)&&(Rame1.portesR1==fermees))))&&!((Rame1.portesR1==ouvertes))))", 1, 2, 0);
+	trans[10][4]	= settr(263,0,17,1,0,"goto accept_S10", 0, 2, 0);
+	trans[10][5]	= settr(264,0,7,1,0,"(1)", 0, 2, 0);
+	trans[10][6]	= settr(265,0,7,1,0,"goto T0_init", 0, 2, 0);
+	trans[10][9]	= settr(268,0,12,1,0,"break", 0, 2, 0);
+	trans[10][13]	= settr(272,0,12,1,0,".(goto)", 0, 2, 0);
+	T = trans[10][12] = settr(271,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(271,0,10,0,0,"DO", 0, 2, 0);
+	trans[10][10]	= settr(269,0,12,5,0,"(!((Rame2.portesR2==ouvertes)))", 1, 2, 0);
+	trans[10][11]	= settr(270,0,12,1,0,"goto accept_S5", 0, 2, 0);
+	trans[10][14]	= settr(273,0,17,1,0,"break", 0, 2, 0);
+	trans[10][18]	= settr(277,0,17,1,0,".(goto)", 0, 2, 0);
+	T = trans[10][17] = settr(276,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(276,0,15,0,0,"DO", 0, 2, 0);
+	trans[10][15]	= settr(274,0,17,6,0,"(!((Rame1.portesR1==ouvertes)))", 1, 2, 0);
+	trans[10][16]	= settr(275,0,17,1,0,"goto accept_S10", 0, 2, 0);
+	trans[10][19]	= settr(278,0,20,1,0,"break", 0, 2, 0);
+	trans[10][20]	= settr(279,0,0,7,7,"-end-", 0, 3500, 0);
 
-	/* proctype 6: p5 */
+	/* proctype 9: p7 */
 
-	trans[6] = (Trans **) emalloc(21*sizeof(Trans *));
+	trans[9] = (Trans **) emalloc(11*sizeof(Trans *));
 
-	trans[6][8]	= settr(153,0,7,1,0,".(goto)", 0, 2, 0);
-	T = trans[6][7] = settr(152,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(152,0,1,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(152,0,3,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(152,0,5,0,0,"DO", 0, 2, 0);
-	trans[6][1]	= settr(146,0,12,12,0,"((!(!(((Rame2.posR2<(NS-1))&&(Rame2.dirR2==1))))&&!((Rame2.posR2==(NS-1)))))", 1, 2, 0);
-	trans[6][2]	= settr(147,0,12,1,0,"goto accept_S5", 0, 2, 0);
-	trans[6][3]	= settr(148,0,17,13,0,"((!(!(((Rame1.posR1<(NS-1))&&(Rame1.dirR1==1))))&&!((Rame1.posR1==(NS-1)))))", 1, 2, 0);
-	trans[6][4]	= settr(149,0,17,1,0,"goto accept_S10", 0, 2, 0);
-	trans[6][5]	= settr(150,0,7,1,0,"(1)", 0, 2, 0);
-	trans[6][6]	= settr(151,0,7,1,0,"goto T0_init", 0, 2, 0);
-	trans[6][9]	= settr(154,0,12,1,0,"break", 0, 2, 0);
-	trans[6][13]	= settr(158,0,12,1,0,".(goto)", 0, 2, 0);
-	T = trans[6][12] = settr(157,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(157,0,10,0,0,"DO", 0, 2, 0);
-	trans[6][10]	= settr(155,0,12,14,0,"(!((Rame2.posR2==(NS-1))))", 1, 2, 0);
-	trans[6][11]	= settr(156,0,12,1,0,"goto accept_S5", 0, 2, 0);
-	trans[6][14]	= settr(159,0,17,1,0,"break", 0, 2, 0);
-	trans[6][18]	= settr(163,0,17,1,0,".(goto)", 0, 2, 0);
-	T = trans[6][17] = settr(162,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(162,0,15,0,0,"DO", 0, 2, 0);
-	trans[6][15]	= settr(160,0,17,15,0,"(!((Rame1.posR1==(NS-1))))", 1, 2, 0);
-	trans[6][16]	= settr(161,0,17,1,0,"goto accept_S10", 0, 2, 0);
-	trans[6][19]	= settr(164,0,20,1,0,"break", 0, 2, 0);
-	trans[6][20]	= settr(165,0,0,16,16,"-end-", 0, 3500, 0);
+	trans[9][7]	= settr(256,0,6,1,0,".(goto)", 0, 2, 0);
+	T = trans[9][6] = settr(255,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(255,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(255,0,4,0,0,"DO", 0, 2, 0);
+	T = trans[ 9][3] = settr(252,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(252,2,1,0,0,"ATOMIC", 1, 2, 0);
+	trans[9][1]	= settr(250,0,6,8,8,"((!((!((Rame1.lieuR1==0))||(Rame1.portesR1==fermees)))||!((!((Rame2.lieuR2==0))||(Rame2.portesR2==fermees)))))", 1, 2, 0); /* m: 2 -> 6,0 */
+	reached9[2] = 1;
+	trans[9][2]	= settr(0,0,0,0,0,"assert(!((!((!((Rame1.lieuR1==0))||(Rame1.portesR1==fermees)))||!((!((Rame2.lieuR2==0))||(Rame2.portesR2==fermees))))))",0,0,0);
+	trans[9][4]	= settr(253,0,6,1,0,"(1)", 0, 2, 0);
+	trans[9][5]	= settr(254,0,6,1,0,"goto T0_init", 0, 2, 0);
+	trans[9][8]	= settr(257,0,9,1,0,"break", 0, 2, 0);
+	trans[9][9]	= settr(258,0,10,1,0,"(1)", 0, 2, 0);
+	trans[9][10]	= settr(259,0,0,9,9,"-end-", 0, 3500, 0);
 
-	/* proctype 5: p4 */
+	/* proctype 8: p6 */
 
-	trans[5] = (Trans **) emalloc(35*sizeof(Trans *));
+	trans[8] = (Trans **) emalloc(35*sizeof(Trans *));
 
-	trans[5][12]	= settr(123,0,11,1,0,".(goto)", 0, 2, 0);
-	T = trans[5][11] = settr(122,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(122,0,1,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(122,0,3,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(122,0,5,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(122,0,7,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(122,0,9,0,0,"DO", 0, 2, 0);
-	trans[5][1]	= settr(112,0,16,17,0,"(((!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))&&!((Rame2.posR2==NS)))&&(!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))||(!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))||!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1))))))))))", 1, 2, 0);
-	trans[5][2]	= settr(113,0,16,1,0,"goto accept_S7", 0, 2, 0);
-	trans[5][3]	= settr(114,0,21,18,0,"(((!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1)))))&&!((Rame2.posR2==1)))&&(!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))||(!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))||!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1))))))))))", 1, 2, 0);
-	trans[5][4]	= settr(115,0,21,1,0,"goto accept_S12", 0, 2, 0);
-	trans[5][5]	= settr(116,0,26,19,0,"((!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))&&!((Rame1.posR1==NS))))", 1, 2, 0);
-	trans[5][6]	= settr(117,0,26,1,0,"goto accept_S17", 0, 2, 0);
-	trans[5][7]	= settr(118,0,31,20,0,"((!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))&&!((Rame1.posR1==1))))", 1, 2, 0);
-	trans[5][8]	= settr(119,0,31,1,0,"goto accept_S22", 0, 2, 0);
-	trans[5][9]	= settr(120,0,11,1,0,"(1)", 0, 2, 0);
-	trans[5][10]	= settr(121,0,11,1,0,"goto T0_init", 0, 2, 0);
-	trans[5][13]	= settr(124,0,16,1,0,"break", 0, 2, 0);
-	trans[5][17]	= settr(128,0,16,1,0,".(goto)", 0, 2, 0);
-	T = trans[5][16] = settr(127,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(127,0,14,0,0,"DO", 0, 2, 0);
-	trans[5][14]	= settr(125,0,16,21,0,"(!((Rame2.posR2==NS)))", 1, 2, 0);
-	trans[5][15]	= settr(126,0,16,1,0,"goto accept_S7", 0, 2, 0);
-	trans[5][18]	= settr(129,0,21,1,0,"break", 0, 2, 0);
-	trans[5][22]	= settr(133,0,21,1,0,".(goto)", 0, 2, 0);
-	T = trans[5][21] = settr(132,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(132,0,19,0,0,"DO", 0, 2, 0);
-	trans[5][19]	= settr(130,0,21,22,0,"(!((Rame2.posR2==1)))", 1, 2, 0);
-	trans[5][20]	= settr(131,0,21,1,0,"goto accept_S12", 0, 2, 0);
-	trans[5][23]	= settr(134,0,26,1,0,"break", 0, 2, 0);
-	trans[5][27]	= settr(138,0,26,1,0,".(goto)", 0, 2, 0);
-	T = trans[5][26] = settr(137,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(137,0,24,0,0,"DO", 0, 2, 0);
-	trans[5][24]	= settr(135,0,26,23,0,"(!((Rame1.posR1==NS)))", 1, 2, 0);
-	trans[5][25]	= settr(136,0,26,1,0,"goto accept_S17", 0, 2, 0);
-	trans[5][28]	= settr(139,0,31,1,0,"break", 0, 2, 0);
-	trans[5][32]	= settr(143,0,31,1,0,".(goto)", 0, 2, 0);
-	T = trans[5][31] = settr(142,0,0,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(142,0,29,0,0,"DO", 0, 2, 0);
-	trans[5][29]	= settr(140,0,31,24,0,"(!((Rame1.posR1==1)))", 1, 2, 0);
-	trans[5][30]	= settr(141,0,31,1,0,"goto accept_S22", 0, 2, 0);
-	trans[5][33]	= settr(144,0,34,1,0,"break", 0, 2, 0);
-	trans[5][34]	= settr(145,0,0,25,25,"-end-", 0, 3500, 0);
+	trans[8][12]	= settr(227,0,11,1,0,".(goto)", 0, 2, 0);
+	T = trans[8][11] = settr(226,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(226,0,1,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(226,0,3,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(226,0,5,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(226,0,7,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(226,0,9,0,0,"DO", 0, 2, 0);
+	trans[8][1]	= settr(216,0,16,10,0,"(!(((Rame2.posR2>=1)&&(Rame2.posR2<=NS))))", 1, 2, 0);
+	trans[8][2]	= settr(217,0,16,1,0,"goto accept_S7", 0, 2, 0);
+	trans[8][3]	= settr(218,0,21,11,0,"(!(((Rame2.dirR2==1)||(Rame2.dirR2==-(1)))))", 1, 2, 0);
+	trans[8][4]	= settr(219,0,21,1,0,"goto accept_S12", 0, 2, 0);
+	trans[8][5]	= settr(220,0,26,12,0,"(!(((Rame1.posR1>=1)&&(Rame1.posR1<=NS))))", 1, 2, 0);
+	trans[8][6]	= settr(221,0,26,1,0,"goto accept_S17", 0, 2, 0);
+	trans[8][7]	= settr(222,0,31,13,0,"(!(((Rame1.dirR1==1)||(Rame1.dirR1==-(1)))))", 1, 2, 0);
+	trans[8][8]	= settr(223,0,31,1,0,"goto accept_S22", 0, 2, 0);
+	trans[8][9]	= settr(224,0,11,1,0,"(1)", 0, 2, 0);
+	trans[8][10]	= settr(225,0,11,1,0,"goto T0_init", 0, 2, 0);
+	trans[8][13]	= settr(228,0,16,1,0,"break", 0, 2, 0);
+	trans[8][17]	= settr(232,0,16,1,0,".(goto)", 0, 2, 0);
+	T = trans[8][16] = settr(231,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(231,0,14,0,0,"DO", 0, 2, 0);
+	trans[8][14]	= settr(229,0,16,14,0,"(!(((Rame2.posR2>=1)&&(Rame2.posR2<=NS))))", 1, 2, 0);
+	trans[8][15]	= settr(230,0,16,1,0,"goto accept_S7", 0, 2, 0);
+	trans[8][18]	= settr(233,0,21,1,0,"break", 0, 2, 0);
+	trans[8][22]	= settr(237,0,21,1,0,".(goto)", 0, 2, 0);
+	T = trans[8][21] = settr(236,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(236,0,19,0,0,"DO", 0, 2, 0);
+	trans[8][19]	= settr(234,0,21,15,0,"(!(((Rame2.dirR2==1)||(Rame2.dirR2==-(1)))))", 1, 2, 0);
+	trans[8][20]	= settr(235,0,21,1,0,"goto accept_S12", 0, 2, 0);
+	trans[8][23]	= settr(238,0,26,1,0,"break", 0, 2, 0);
+	trans[8][27]	= settr(242,0,26,1,0,".(goto)", 0, 2, 0);
+	T = trans[8][26] = settr(241,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(241,0,24,0,0,"DO", 0, 2, 0);
+	trans[8][24]	= settr(239,0,26,16,0,"(!(((Rame1.posR1>=1)&&(Rame1.posR1<=NS))))", 1, 2, 0);
+	trans[8][25]	= settr(240,0,26,1,0,"goto accept_S17", 0, 2, 0);
+	trans[8][28]	= settr(243,0,31,1,0,"break", 0, 2, 0);
+	trans[8][32]	= settr(247,0,31,1,0,".(goto)", 0, 2, 0);
+	T = trans[8][31] = settr(246,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(246,0,29,0,0,"DO", 0, 2, 0);
+	trans[8][29]	= settr(244,0,31,17,0,"(!(((Rame1.dirR1==1)||(Rame1.dirR1==-(1)))))", 1, 2, 0);
+	trans[8][30]	= settr(245,0,31,1,0,"goto accept_S22", 0, 2, 0);
+	trans[8][33]	= settr(248,0,34,1,0,"break", 0, 2, 0);
+	trans[8][34]	= settr(249,0,0,18,18,"-end-", 0, 3500, 0);
 
-	/* proctype 4: p3 */
+	/* proctype 7: p5 */
 
-	trans[4] = (Trans **) emalloc(51*sizeof(Trans *));
+	trans[7] = (Trans **) emalloc(21*sizeof(Trans *));
 
-	trans[4][15]	= settr(76,0,14,1,0,".(goto)", 0, 2, 0);
-	T = trans[4][14] = settr(75,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(75,0,1,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(75,0,5,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(75,0,6,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(75,0,8,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(75,0,10,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(75,0,12,0,0,"DO", 0, 2, 0);
-	trans[4][1]	= settr(62,0,22,26,0,"(((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&(!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))||(!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))||!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1)))))))))", 1, 2, 0);
-	trans[4][2]	= settr(63,0,22,1,0,"goto accept_S7", 0, 2, 0);
-	T = trans[ 4][5] = settr(66,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(66,2,3,0,0,"ATOMIC", 1, 2, 0);
-	trans[4][3]	= settr(64,0,14,27,27,"((((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))&&!((Rame1.dirR1==-(1))))||(((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))&&!((Rame1.dirR1==1)))||(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&!((Rame2.dirR2==-(1))))||((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&!((Rame2.dirR2==1)))))))", 1, 2, 0); /* m: 4 -> 14,0 */
-	reached4[4] = 1;
-	trans[4][4]	= settr(0,0,0,0,0,"assert(!((((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))&&!((Rame1.dirR1==-(1))))||(((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))&&!((Rame1.dirR1==1)))||(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&!((Rame2.dirR2==-(1))))||((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&!((Rame2.dirR2==1))))))))",0,0,0);
-	trans[4][6]	= settr(67,0,30,28,0,"(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&(!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))||(!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))||!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1)))))))))", 1, 2, 0);
-	trans[4][7]	= settr(68,0,30,1,0,"goto accept_S12", 0, 2, 0);
-	trans[4][8]	= settr(69,0,38,29,0,"((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))))", 1, 2, 0);
-	trans[4][9]	= settr(70,0,38,1,0,"goto accept_S17", 0, 2, 0);
-	trans[4][10]	= settr(71,0,46,30,0,"((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))))", 1, 2, 0);
-	trans[4][11]	= settr(72,0,46,1,0,"goto accept_S22", 0, 2, 0);
-	trans[4][12]	= settr(73,0,14,1,0,"(1)", 0, 2, 0);
-	trans[4][13]	= settr(74,0,14,1,0,"goto T0_init", 0, 2, 0);
-	trans[4][16]	= settr(77,0,22,1,0,"break", 0, 2, 0);
-	trans[4][23]	= settr(84,0,22,1,0,".(goto)", 0, 2, 0);
-	T = trans[4][22] = settr(83,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(83,0,17,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(83,0,21,0,0,"DO", 0, 2, 0);
-	trans[4][17]	= settr(78,0,22,31,0,"(!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))", 1, 2, 0);
-	trans[4][18]	= settr(79,0,22,1,0,"goto accept_S7", 0, 2, 0);
-	T = trans[ 4][21] = settr(82,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(82,2,19,0,0,"ATOMIC", 1, 2, 0);
-	trans[4][19]	= settr(80,0,22,32,32,"((!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1))))&&!((Rame2.dirR2==1))))", 1, 2, 0); /* m: 20 -> 22,0 */
-	reached4[20] = 1;
-	trans[4][20]	= settr(0,0,0,0,0,"assert(!((!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1))))&&!((Rame2.dirR2==1)))))",0,0,0);
-	trans[4][24]	= settr(85,0,30,1,0,"break", 0, 2, 0);
-	trans[4][31]	= settr(92,0,30,1,0,".(goto)", 0, 2, 0);
-	T = trans[4][30] = settr(91,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(91,0,25,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(91,0,29,0,0,"DO", 0, 2, 0);
-	trans[4][25]	= settr(86,0,30,33,0,"(!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))", 1, 2, 0);
-	trans[4][26]	= settr(87,0,30,1,0,"goto accept_S12", 0, 2, 0);
-	T = trans[ 4][29] = settr(90,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(90,2,27,0,0,"ATOMIC", 1, 2, 0);
-	trans[4][27]	= settr(88,0,30,34,34,"((!(((Rame2.posR2==1)&&(Rame2.dirR2==1)))&&!((Rame2.dirR2==-(1)))))", 1, 2, 0); /* m: 28 -> 30,0 */
-	reached4[28] = 1;
-	trans[4][28]	= settr(0,0,0,0,0,"assert(!((!(((Rame2.posR2==1)&&(Rame2.dirR2==1)))&&!((Rame2.dirR2==-(1))))))",0,0,0);
-	trans[4][32]	= settr(93,0,38,1,0,"break", 0, 2, 0);
-	trans[4][39]	= settr(100,0,38,1,0,".(goto)", 0, 2, 0);
-	T = trans[4][38] = settr(99,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(99,0,33,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(99,0,37,0,0,"DO", 0, 2, 0);
-	trans[4][33]	= settr(94,0,38,35,0,"(!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))", 1, 2, 0);
-	trans[4][34]	= settr(95,0,38,1,0,"goto accept_S17", 0, 2, 0);
-	T = trans[ 4][37] = settr(98,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(98,2,35,0,0,"ATOMIC", 1, 2, 0);
-	trans[4][35]	= settr(96,0,38,36,36,"((!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))&&!((Rame1.dirR1==1))))", 1, 2, 0); /* m: 36 -> 38,0 */
-	reached4[36] = 1;
-	trans[4][36]	= settr(0,0,0,0,0,"assert(!((!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))&&!((Rame1.dirR1==1)))))",0,0,0);
-	trans[4][40]	= settr(101,0,46,1,0,"break", 0, 2, 0);
-	trans[4][47]	= settr(108,0,46,1,0,".(goto)", 0, 2, 0);
-	T = trans[4][46] = settr(107,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(107,0,41,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(107,0,45,0,0,"DO", 0, 2, 0);
-	trans[4][41]	= settr(102,0,46,37,0,"(!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))", 1, 2, 0);
-	trans[4][42]	= settr(103,0,46,1,0,"goto accept_S22", 0, 2, 0);
-	T = trans[ 4][45] = settr(106,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(106,2,43,0,0,"ATOMIC", 1, 2, 0);
-	trans[4][43]	= settr(104,0,46,38,38,"((!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))&&!((Rame1.dirR1==-(1)))))", 1, 2, 0); /* m: 44 -> 46,0 */
-	reached4[44] = 1;
-	trans[4][44]	= settr(0,0,0,0,0,"assert(!((!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))&&!((Rame1.dirR1==-(1))))))",0,0,0);
-	trans[4][48]	= settr(109,0,49,1,0,"break", 0, 2, 0);
-	trans[4][49]	= settr(110,0,50,1,0,"(1)", 0, 2, 0);
-	trans[4][50]	= settr(111,0,0,39,39,"-end-", 0, 3500, 0);
+	trans[7][8]	= settr(203,0,7,1,0,".(goto)", 0, 2, 0);
+	T = trans[7][7] = settr(202,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(202,0,1,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(202,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(202,0,5,0,0,"DO", 0, 2, 0);
+	trans[7][1]	= settr(196,0,12,19,0,"((!(!(((Rame2.posR2<(NS-1))&&(Rame2.dirR2==1))))&&!((Rame2.posR2==(NS-1)))))", 1, 2, 0);
+	trans[7][2]	= settr(197,0,12,1,0,"goto accept_S5", 0, 2, 0);
+	trans[7][3]	= settr(198,0,17,20,0,"((!(!(((Rame1.posR1<(NS-1))&&(Rame1.dirR1==1))))&&!((Rame1.posR1==(NS-1)))))", 1, 2, 0);
+	trans[7][4]	= settr(199,0,17,1,0,"goto accept_S10", 0, 2, 0);
+	trans[7][5]	= settr(200,0,7,1,0,"(1)", 0, 2, 0);
+	trans[7][6]	= settr(201,0,7,1,0,"goto T0_init", 0, 2, 0);
+	trans[7][9]	= settr(204,0,12,1,0,"break", 0, 2, 0);
+	trans[7][13]	= settr(208,0,12,1,0,".(goto)", 0, 2, 0);
+	T = trans[7][12] = settr(207,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(207,0,10,0,0,"DO", 0, 2, 0);
+	trans[7][10]	= settr(205,0,12,21,0,"(!((Rame2.posR2==(NS-1))))", 1, 2, 0);
+	trans[7][11]	= settr(206,0,12,1,0,"goto accept_S5", 0, 2, 0);
+	trans[7][14]	= settr(209,0,17,1,0,"break", 0, 2, 0);
+	trans[7][18]	= settr(213,0,17,1,0,".(goto)", 0, 2, 0);
+	T = trans[7][17] = settr(212,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(212,0,15,0,0,"DO", 0, 2, 0);
+	trans[7][15]	= settr(210,0,17,22,0,"(!((Rame1.posR1==(NS-1))))", 1, 2, 0);
+	trans[7][16]	= settr(211,0,17,1,0,"goto accept_S10", 0, 2, 0);
+	trans[7][19]	= settr(214,0,20,1,0,"break", 0, 2, 0);
+	trans[7][20]	= settr(215,0,0,23,23,"-end-", 0, 3500, 0);
 
-	/* proctype 3: p0 */
+	/* proctype 6: p4 */
+
+	trans[6] = (Trans **) emalloc(35*sizeof(Trans *));
+
+	trans[6][12]	= settr(173,0,11,1,0,".(goto)", 0, 2, 0);
+	T = trans[6][11] = settr(172,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(172,0,1,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(172,0,3,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(172,0,5,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(172,0,7,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(172,0,9,0,0,"DO", 0, 2, 0);
+	trans[6][1]	= settr(162,0,16,24,0,"(((!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))&&!((Rame2.posR2==NS)))&&(!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))||(!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))||!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1))))))))))", 1, 2, 0);
+	trans[6][2]	= settr(163,0,16,1,0,"goto accept_S7", 0, 2, 0);
+	trans[6][3]	= settr(164,0,21,25,0,"(((!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1)))))&&!((Rame2.posR2==1)))&&(!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))||(!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame2.posR2<NS)&&(Rame2.dirR2==1))))||!(!(((Rame2.posR2>1)&&(Rame2.dirR2==-(1))))))))))", 1, 2, 0);
+	trans[6][4]	= settr(165,0,21,1,0,"goto accept_S12", 0, 2, 0);
+	trans[6][5]	= settr(166,0,26,26,0,"((!(!(((Rame1.posR1<NS)&&(Rame1.dirR1==1))))&&!((Rame1.posR1==NS))))", 1, 2, 0);
+	trans[6][6]	= settr(167,0,26,1,0,"goto accept_S17", 0, 2, 0);
+	trans[6][7]	= settr(168,0,31,27,0,"((!(!(((Rame1.posR1>1)&&(Rame1.dirR1==-(1)))))&&!((Rame1.posR1==1))))", 1, 2, 0);
+	trans[6][8]	= settr(169,0,31,1,0,"goto accept_S22", 0, 2, 0);
+	trans[6][9]	= settr(170,0,11,1,0,"(1)", 0, 2, 0);
+	trans[6][10]	= settr(171,0,11,1,0,"goto T0_init", 0, 2, 0);
+	trans[6][13]	= settr(174,0,16,1,0,"break", 0, 2, 0);
+	trans[6][17]	= settr(178,0,16,1,0,".(goto)", 0, 2, 0);
+	T = trans[6][16] = settr(177,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(177,0,14,0,0,"DO", 0, 2, 0);
+	trans[6][14]	= settr(175,0,16,28,0,"(!((Rame2.posR2==NS)))", 1, 2, 0);
+	trans[6][15]	= settr(176,0,16,1,0,"goto accept_S7", 0, 2, 0);
+	trans[6][18]	= settr(179,0,21,1,0,"break", 0, 2, 0);
+	trans[6][22]	= settr(183,0,21,1,0,".(goto)", 0, 2, 0);
+	T = trans[6][21] = settr(182,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(182,0,19,0,0,"DO", 0, 2, 0);
+	trans[6][19]	= settr(180,0,21,29,0,"(!((Rame2.posR2==1)))", 1, 2, 0);
+	trans[6][20]	= settr(181,0,21,1,0,"goto accept_S12", 0, 2, 0);
+	trans[6][23]	= settr(184,0,26,1,0,"break", 0, 2, 0);
+	trans[6][27]	= settr(188,0,26,1,0,".(goto)", 0, 2, 0);
+	T = trans[6][26] = settr(187,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(187,0,24,0,0,"DO", 0, 2, 0);
+	trans[6][24]	= settr(185,0,26,30,0,"(!((Rame1.posR1==NS)))", 1, 2, 0);
+	trans[6][25]	= settr(186,0,26,1,0,"goto accept_S17", 0, 2, 0);
+	trans[6][28]	= settr(189,0,31,1,0,"break", 0, 2, 0);
+	trans[6][32]	= settr(193,0,31,1,0,".(goto)", 0, 2, 0);
+	T = trans[6][31] = settr(192,0,0,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(192,0,29,0,0,"DO", 0, 2, 0);
+	trans[6][29]	= settr(190,0,31,31,0,"(!((Rame1.posR1==1)))", 1, 2, 0);
+	trans[6][30]	= settr(191,0,31,1,0,"goto accept_S22", 0, 2, 0);
+	trans[6][33]	= settr(194,0,34,1,0,"break", 0, 2, 0);
+	trans[6][34]	= settr(195,0,0,32,32,"-end-", 0, 3500, 0);
+
+	/* proctype 5: p3 */
+
+	trans[5] = (Trans **) emalloc(51*sizeof(Trans *));
+
+	trans[5][15]	= settr(126,0,14,1,0,".(goto)", 0, 2, 0);
+	T = trans[5][14] = settr(125,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(125,0,1,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(125,0,5,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(125,0,6,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(125,0,8,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(125,0,10,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(125,0,12,0,0,"DO", 0, 2, 0);
+	trans[5][1]	= settr(112,0,22,33,0,"(((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&(!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))||(!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))||!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1)))))))))", 1, 2, 0);
+	trans[5][2]	= settr(113,0,22,1,0,"goto accept_S7", 0, 2, 0);
+	T = trans[ 5][5] = settr(116,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(116,2,3,0,0,"ATOMIC", 1, 2, 0);
+	trans[5][3]	= settr(114,0,14,34,34,"((((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))&&!((Rame1.dirR1==-(1))))||(((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))&&!((Rame1.dirR1==1)))||(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&!((Rame2.dirR2==-(1))))||((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&!((Rame2.dirR2==1)))))))", 1, 2, 0); /* m: 4 -> 14,0 */
+	reached5[4] = 1;
+	trans[5][4]	= settr(0,0,0,0,0,"assert(!((((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))&&!((Rame1.dirR1==-(1))))||(((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))&&!((Rame1.dirR1==1)))||(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&!((Rame2.dirR2==-(1))))||((!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1))))&&!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))&&!((Rame2.dirR2==1))))))))",0,0,0);
+	trans[5][6]	= settr(117,0,30,35,0,"(((!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))&&!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))&&(!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))||(!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))||(!(!(((Rame2.posR2!=1)&&(Rame2.dirR2==-(1)))))||!(!(((Rame2.posR2!=NS)&&(Rame2.dirR2==1)))))))))", 1, 2, 0);
+	trans[5][7]	= settr(118,0,30,1,0,"goto accept_S12", 0, 2, 0);
+	trans[5][8]	= settr(119,0,38,36,0,"((!(!(((Rame1.posR1!=NS)&&(Rame1.dirR1==1))))&&!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))))", 1, 2, 0);
+	trans[5][9]	= settr(120,0,38,1,0,"goto accept_S17", 0, 2, 0);
+	trans[5][10]	= settr(121,0,46,37,0,"((!(!(((Rame1.posR1!=1)&&(Rame1.dirR1==-(1)))))&&!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))))", 1, 2, 0);
+	trans[5][11]	= settr(122,0,46,1,0,"goto accept_S22", 0, 2, 0);
+	trans[5][12]	= settr(123,0,14,1,0,"(1)", 0, 2, 0);
+	trans[5][13]	= settr(124,0,14,1,0,"goto T0_init", 0, 2, 0);
+	trans[5][16]	= settr(127,0,22,1,0,"break", 0, 2, 0);
+	trans[5][23]	= settr(134,0,22,1,0,".(goto)", 0, 2, 0);
+	T = trans[5][22] = settr(133,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(133,0,17,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(133,0,21,0,0,"DO", 0, 2, 0);
+	trans[5][17]	= settr(128,0,22,38,0,"(!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1)))))", 1, 2, 0);
+	trans[5][18]	= settr(129,0,22,1,0,"goto accept_S7", 0, 2, 0);
+	T = trans[ 5][21] = settr(132,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(132,2,19,0,0,"ATOMIC", 1, 2, 0);
+	trans[5][19]	= settr(130,0,22,39,39,"((!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1))))&&!((Rame2.dirR2==1))))", 1, 2, 0); /* m: 20 -> 22,0 */
+	reached5[20] = 1;
+	trans[5][20]	= settr(0,0,0,0,0,"assert(!((!(((Rame2.posR2==NS)&&(Rame2.dirR2==-(1))))&&!((Rame2.dirR2==1)))))",0,0,0);
+	trans[5][24]	= settr(135,0,30,1,0,"break", 0, 2, 0);
+	trans[5][31]	= settr(142,0,30,1,0,".(goto)", 0, 2, 0);
+	T = trans[5][30] = settr(141,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(141,0,25,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(141,0,29,0,0,"DO", 0, 2, 0);
+	trans[5][25]	= settr(136,0,30,40,0,"(!(((Rame2.posR2==1)&&(Rame2.dirR2==1))))", 1, 2, 0);
+	trans[5][26]	= settr(137,0,30,1,0,"goto accept_S12", 0, 2, 0);
+	T = trans[ 5][29] = settr(140,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(140,2,27,0,0,"ATOMIC", 1, 2, 0);
+	trans[5][27]	= settr(138,0,30,41,41,"((!(((Rame2.posR2==1)&&(Rame2.dirR2==1)))&&!((Rame2.dirR2==-(1)))))", 1, 2, 0); /* m: 28 -> 30,0 */
+	reached5[28] = 1;
+	trans[5][28]	= settr(0,0,0,0,0,"assert(!((!(((Rame2.posR2==1)&&(Rame2.dirR2==1)))&&!((Rame2.dirR2==-(1))))))",0,0,0);
+	trans[5][32]	= settr(143,0,38,1,0,"break", 0, 2, 0);
+	trans[5][39]	= settr(150,0,38,1,0,".(goto)", 0, 2, 0);
+	T = trans[5][38] = settr(149,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(149,0,33,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(149,0,37,0,0,"DO", 0, 2, 0);
+	trans[5][33]	= settr(144,0,38,42,0,"(!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1)))))", 1, 2, 0);
+	trans[5][34]	= settr(145,0,38,1,0,"goto accept_S17", 0, 2, 0);
+	T = trans[ 5][37] = settr(148,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(148,2,35,0,0,"ATOMIC", 1, 2, 0);
+	trans[5][35]	= settr(146,0,38,43,43,"((!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))&&!((Rame1.dirR1==1))))", 1, 2, 0); /* m: 36 -> 38,0 */
+	reached5[36] = 1;
+	trans[5][36]	= settr(0,0,0,0,0,"assert(!((!(((Rame1.posR1==NS)&&(Rame1.dirR1==-(1))))&&!((Rame1.dirR1==1)))))",0,0,0);
+	trans[5][40]	= settr(151,0,46,1,0,"break", 0, 2, 0);
+	trans[5][47]	= settr(158,0,46,1,0,".(goto)", 0, 2, 0);
+	T = trans[5][46] = settr(157,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(157,0,41,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(157,0,45,0,0,"DO", 0, 2, 0);
+	trans[5][41]	= settr(152,0,46,44,0,"(!(((Rame1.posR1==1)&&(Rame1.dirR1==1))))", 1, 2, 0);
+	trans[5][42]	= settr(153,0,46,1,0,"goto accept_S22", 0, 2, 0);
+	T = trans[ 5][45] = settr(156,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(156,2,43,0,0,"ATOMIC", 1, 2, 0);
+	trans[5][43]	= settr(154,0,46,45,45,"((!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))&&!((Rame1.dirR1==-(1)))))", 1, 2, 0); /* m: 44 -> 46,0 */
+	reached5[44] = 1;
+	trans[5][44]	= settr(0,0,0,0,0,"assert(!((!(((Rame1.posR1==1)&&(Rame1.dirR1==1)))&&!((Rame1.dirR1==-(1))))))",0,0,0);
+	trans[5][48]	= settr(159,0,49,1,0,"break", 0, 2, 0);
+	trans[5][49]	= settr(160,0,50,1,0,"(1)", 0, 2, 0);
+	trans[5][50]	= settr(161,0,0,46,46,"-end-", 0, 3500, 0);
+
+	/* proctype 4: p0 */
+
+	trans[4] = (Trans **) emalloc(11*sizeof(Trans *));
+
+	trans[4][7]	= settr(108,0,6,1,0,".(goto)", 0, 2, 0);
+	T = trans[4][6] = settr(107,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(107,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(107,0,4,0,0,"DO", 0, 2, 0);
+	T = trans[ 4][3] = settr(104,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(104,2,1,0,0,"ATOMIC", 1, 2, 0);
+	trans[4][1]	= settr(102,0,6,47,47,"(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2))))", 1, 2, 0); /* m: 2 -> 6,0 */
+	reached4[2] = 1;
+	trans[4][2]	= settr(0,0,0,0,0,"assert(!(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2)))))",0,0,0);
+	trans[4][4]	= settr(105,0,6,1,0,"(1)", 0, 2, 0);
+	trans[4][5]	= settr(106,0,6,1,0,"goto T0_init", 0, 2, 0);
+	trans[4][8]	= settr(109,0,9,1,0,"break", 0, 2, 0);
+	trans[4][9]	= settr(110,0,10,1,0,"(1)", 0, 2, 0);
+	trans[4][10]	= settr(111,0,0,48,48,"-end-", 0, 3500, 0);
+
+	/* proctype 3: pp */
 
 	trans[3] = (Trans **) emalloc(11*sizeof(Trans *));
 
-	trans[3][7]	= settr(58,0,6,1,0,".(goto)", 0, 2, 0);
-	T = trans[3][6] = settr(57,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(57,0,3,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(57,0,4,0,0,"DO", 0, 2, 0);
-	T = trans[ 3][3] = settr(54,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(54,2,1,0,0,"ATOMIC", 1, 2, 0);
-	trans[3][1]	= settr(52,0,6,40,40,"(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2))))", 1, 2, 0); /* m: 2 -> 6,0 */
+	trans[3][7]	= settr(98,0,6,1,0,".(goto)", 0, 2, 0);
+	T = trans[3][6] = settr(97,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(97,0,3,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(97,0,4,0,0,"DO", 0, 2, 0);
+	T = trans[ 3][3] = settr(94,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(94,2,1,0,0,"ATOMIC", 1, 2, 0);
+	trans[3][1]	= settr(92,0,6,49,49,"(!((Rame1.posR1>=1)))", 1, 2, 0); /* m: 2 -> 6,0 */
 	reached3[2] = 1;
-	trans[3][2]	= settr(0,0,0,0,0,"assert(!(!(((Rame1.posR1!=Rame2.posR2)||(Rame1.dirR1!=Rame2.dirR2)))))",0,0,0);
-	trans[3][4]	= settr(55,0,6,1,0,"(1)", 0, 2, 0);
-	trans[3][5]	= settr(56,0,6,1,0,"goto T0_init", 0, 2, 0);
-	trans[3][8]	= settr(59,0,9,1,0,"break", 0, 2, 0);
-	trans[3][9]	= settr(60,0,10,1,0,"(1)", 0, 2, 0);
-	trans[3][10]	= settr(61,0,0,41,41,"-end-", 0, 3500, 0);
+	trans[3][2]	= settr(0,0,0,0,0,"assert(!(!((Rame1.posR1>=1))))",0,0,0);
+	trans[3][4]	= settr(95,0,6,1,0,"(1)", 0, 2, 0);
+	trans[3][5]	= settr(96,0,6,1,0,"goto T0_init", 0, 2, 0);
+	trans[3][8]	= settr(99,0,9,1,0,"break", 0, 2, 0);
+	trans[3][9]	= settr(100,0,10,1,0,"(1)", 0, 2, 0);
+	trans[3][10]	= settr(101,0,0,50,50,"-end-", 0, 3500, 0);
 
 	/* proctype 2: :init: */
 
 	trans[2] = (Trans **) emalloc(5*sizeof(Trans *));
 
-	T = trans[ 2][3] = settr(50,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(50,2,1,0,0,"ATOMIC", 1, 2, 0);
-	trans[2][1]	= settr(48,2,2,42,42,"(run Rame1())", 1, 2, 0);
-	trans[2][2]	= settr(49,0,4,43,43,"(run Rame2())", 1, 2, 0);
-	trans[2][4]	= settr(51,0,0,44,44,"-end-", 0, 3500, 0);
+	T = trans[ 2][3] = settr(90,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(90,2,1,0,0,"ATOMIC", 0, 2, 0);
+	trans[2][1]	= settr(88,2,2,51,51,"(run Rame1())", 0, 2, 0);
+	trans[2][2]	= settr(89,0,4,52,52,"(run Rame2())", 0, 2, 0);
+	trans[2][4]	= settr(91,0,0,53,53,"-end-", 0, 3500, 0);
 
 	/* proctype 1: Rame2 */
 
-	trans[1] = (Trans **) emalloc(25*sizeof(Trans *));
+	trans[1] = (Trans **) emalloc(45*sizeof(Trans *));
 
-	trans[1][22]	= settr(45,0,21,1,0,".(goto)", 0, 2, 0);
-	T = trans[1][21] = settr(44,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(44,0,3,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(44,0,7,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(44,0,11,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(44,0,14,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(44,0,17,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(44,0,20,0,0,"DO", 0, 2, 0);
-	T = trans[ 1][3] = settr(26,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(26,2,1,0,0,"ATOMIC", 1, 2, 0);
-	trans[1][1]	= settr(24,4,4,45,45,"((((dirR2==1)&&((posR1!=(posR2+1))||(dirR1!=dirR2)))&&(posR2<NS)))", 1, 2, 0); /* m: 2 -> 4,0 */
+	trans[1][42]	= settr(85,0,41,1,0,".(goto)", 0, 2, 0);
+	T = trans[1][41] = settr(84,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,5,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,11,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,16,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,21,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,25,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,28,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,31,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,34,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(84,0,37,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(84,0,40,0,0,"DO", 0, 2, 0);
+	T = trans[ 1][5] = settr(48,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(48,2,1,0,0,"ATOMIC", 1, 2, 0);
+	trans[1][1]	= settr(44,4,6,54,54,"((((((dirR2==1)&&(lieuR2==1))&&(portesR2==refermees))&&(((posR1!=posR2)||(lieuR1!=0))||(dirR1!=dirR2)))&&(posR2<=NS)))", 1, 2, 0); /* m: 2 -> 6,0 */
 	reached1[2] = 1;
-	trans[1][2]	= settr(0,0,0,0,0,"posR2 = (posR2+1)",0,0,0);
-	trans[1][4]	= settr(27,0,21,1,0,"(1)", 0, 2, 0);
-	T = trans[ 1][7] = settr(30,2,0,0,0,"ATOMIC", 0, 2, 0);
-	T->nxt	= settr(30,2,5,0,0,"ATOMIC", 0, 2, 0);
-	trans[1][5]	= settr(28,4,8,46,46,"((((dirR2==-(1))&&((posR1!=(posR2-1))||(dirR1!=dirR2)))&&(posR2>1)))", 0, 2, 0); /* m: 6 -> 8,0 */
-	reached1[6] = 1;
-	trans[1][6]	= settr(0,0,0,0,0,"posR2 = (posR2-1)",0,0,0);
-	trans[1][8]	= settr(31,0,21,1,0,"(1)", 0, 2, 0);
-	T = trans[ 1][11] = settr(34,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(34,2,9,0,0,"ATOMIC", 1, 2, 0);
-	trans[1][9]	= settr(32,0,21,47,47,"((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))", 1, 2, 0); /* m: 10 -> 21,0 */
-	reached1[10] = 1;
-	trans[1][10]	= settr(0,0,0,0,0,"dirR2 = -(1)",0,0,0);
-	T = trans[ 1][14] = settr(37,2,0,0,0,"ATOMIC", 0, 2, 0);
-	T->nxt	= settr(37,2,12,0,0,"ATOMIC", 0, 2, 0);
-	trans[1][12]	= settr(35,0,21,48,48,"((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))", 0, 2, 0); /* m: 13 -> 21,0 */
-	reached1[13] = 1;
-	trans[1][13]	= settr(0,0,0,0,0,"dirR2 = 1",0,0,0);
-	T = trans[ 1][17] = settr(40,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(40,2,15,0,0,"ATOMIC", 1, 3, 505);
-	trans[1][15]	= settr(38,2,16,49,49,"ReqR1!1", 1, 3, 505);
-	trans[1][16]	= settr(39,0,21,50,50,"R1ToR2?posR1,dirR1", 1, 3, 505);
-	T = trans[ 1][20] = settr(43,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(43,2,18,0,0,"ATOMIC", 1, 504, 6);
-	trans[1][18]	= settr(41,2,19,51,51,"ReqR2?1", 1, 504, 6);
-	trans[1][19]	= settr(42,0,21,52,52,"R2ToR1!posR2,dirR2", 1, 504, 6);
-	trans[1][23]	= settr(46,0,24,1,0,"break", 0, 2, 0);
-	trans[1][24]	= settr(47,0,0,53,53,"-end-", 0, 3500, 0);
+	trans[1][2]	= settr(0,0,0,0,0,"portesR2 = fermees",0,0,0);
+	trans[1][3]	= settr(0,0,0,0,0,"posR2 = posR2",0,0,0);
+	trans[1][4]	= settr(0,0,0,0,0,"lieuR2 = 0",0,0,0);
+	trans[1][6]	= settr(49,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][11] = settr(54,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(54,2,7,0,0,"ATOMIC", 0, 2, 0);
+	trans[1][7]	= settr(50,4,12,55,55,"((((((dirR2==-(1))&&(lieuR1==1))&&(portesR2==refermees))&&(((posR2!=(posR1-1))||(lieuR1!=0))||(dirR1!=dirR2)))&&(posR2>1)))", 0, 2, 0); /* m: 8 -> 12,0 */
+	reached1[8] = 1;
+	trans[1][8]	= settr(0,0,0,0,0,"portesR2 = fermees",0,0,0);
+	trans[1][9]	= settr(0,0,0,0,0,"posR2 = (posR2-1)",0,0,0);
+	trans[1][10]	= settr(0,0,0,0,0,"lieuR2 = 0",0,0,0);
+	trans[1][12]	= settr(55,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][16] = settr(59,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(59,2,13,0,0,"ATOMIC", 1, 2, 0);
+	trans[1][13]	= settr(56,4,17,56,56,"(((((dirR2==1)&&(lieuR2==0))&&(((posR1!=(posR2+1))||(lieuR1!=1))||(dirR1!=dirR2)))&&(posR2<NS)))", 1, 2, 0); /* m: 14 -> 17,0 */
+	reached1[14] = 1;
+	trans[1][14]	= settr(0,0,0,0,0,"posR2 = (posR2+1)",0,0,0);
+	trans[1][15]	= settr(0,0,0,0,0,"lieuR2 = 1",0,0,0);
+	trans[1][17]	= settr(60,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][21] = settr(64,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(64,2,18,0,0,"ATOMIC", 0, 2, 0);
+	trans[1][18]	= settr(61,4,22,57,57,"(((((dirR2==-(1))&&(lieuR2==0))&&(((posR1!=posR2)||(lieuR1!=1))||(dirR1!=dirR2)))&&(posR2>=1)))", 0, 2, 0); /* m: 19 -> 22,0 */
+	reached1[19] = 1;
+	trans[1][19]	= settr(0,0,0,0,0,"posR2 = posR2",0,0,0);
+	trans[1][20]	= settr(0,0,0,0,0,"lieuR2 = 1",0,0,0);
+	trans[1][22]	= settr(65,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 1][25] = settr(68,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(68,2,23,0,0,"ATOMIC", 0, 2, 0);
+	trans[1][23]	= settr(66,0,41,58,58,"(((portesR2==fermees)&&(lieuR2==1)))", 0, 2, 0); /* m: 24 -> 41,0 */
+	reached1[24] = 1;
+	trans[1][24]	= settr(0,0,0,0,0,"portesR2 = ouvertes",0,0,0);
+	T = trans[ 1][28] = settr(71,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(71,2,26,0,0,"ATOMIC", 0, 2, 0);
+	trans[1][26]	= settr(69,0,41,59,59,"((portesR2==ouvertes))", 0, 2, 0); /* m: 27 -> 41,0 */
+	reached1[27] = 1;
+	trans[1][27]	= settr(0,0,0,0,0,"portesR2 = refermees",0,0,0);
+	T = trans[ 1][31] = settr(74,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(74,2,29,0,0,"ATOMIC", 1, 2, 0);
+	trans[1][29]	= settr(72,0,41,60,60,"((((dirR2==1)&&(posR2==NS))&&((posR2!=posR1)||(dirR1!=-(1)))))", 1, 2, 0); /* m: 30 -> 41,0 */
+	reached1[30] = 1;
+	trans[1][30]	= settr(0,0,0,0,0,"dirR2 = -(1)",0,0,0);
+	T = trans[ 1][34] = settr(77,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(77,2,32,0,0,"ATOMIC", 0, 2, 0);
+	trans[1][32]	= settr(75,0,41,61,61,"((((dirR2==-(1))&&(posR2==1))&&((posR2!=posR1)||(dirR1!=1))))", 0, 2, 0); /* m: 33 -> 41,0 */
+	reached1[33] = 1;
+	trans[1][33]	= settr(0,0,0,0,0,"dirR2 = 1",0,0,0);
+	T = trans[ 1][37] = settr(80,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(80,2,35,0,0,"ATOMIC", 1, 3, 505);
+	trans[1][35]	= settr(78,2,36,62,62,"ReqR1!1", 1, 3, 505);
+	trans[1][36]	= settr(79,0,41,63,63,"R1ToR2?posR1,dirR1,lieuR1", 1, 3, 505);
+	T = trans[ 1][40] = settr(83,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(83,2,38,0,0,"ATOMIC", 1, 504, 6);
+	trans[1][38]	= settr(81,2,39,64,64,"ReqR2?1", 1, 504, 6);
+	trans[1][39]	= settr(82,0,41,65,65,"R2ToR1!posR2,dirR2,lieuR2", 1, 504, 6);
+	trans[1][43]	= settr(86,0,44,1,0,"break", 0, 2, 0);
+	trans[1][44]	= settr(87,0,0,66,66,"-end-", 0, 3500, 0);
 
 	/* proctype 0: Rame1 */
 
-	trans[0] = (Trans **) emalloc(25*sizeof(Trans *));
+	trans[0] = (Trans **) emalloc(45*sizeof(Trans *));
 
-	trans[0][22]	= settr(21,0,21,1,0,".(goto)", 0, 2, 0);
-	T = trans[0][21] = settr(20,0,0,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(20,0,3,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(20,0,7,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(20,0,11,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(20,0,14,0,0,"DO", 0, 2, 0);
-	T = T->nxt	= settr(20,0,17,0,0,"DO", 0, 2, 0);
-	    T->nxt	= settr(20,0,20,0,0,"DO", 0, 2, 0);
-	T = trans[ 0][3] = settr(2,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(2,2,1,0,0,"ATOMIC", 1, 2, 0);
-	trans[0][1]	= settr(0,4,4,54,54,"((((dirR1==1)&&((posR2!=(posR1+1))||(dirR1!=dirR2)))&&(posR1<NS)))", 1, 2, 0); /* m: 2 -> 4,0 */
+	trans[0][42]	= settr(41,0,41,1,0,".(goto)", 0, 2, 0);
+	T = trans[0][41] = settr(40,0,0,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,5,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,11,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,16,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,21,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,25,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,28,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,31,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,34,0,0,"DO", 0, 2, 0);
+	T = T->nxt	= settr(40,0,37,0,0,"DO", 0, 2, 0);
+	    T->nxt	= settr(40,0,40,0,0,"DO", 0, 2, 0);
+	T = trans[ 0][5] = settr(4,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(4,2,1,0,0,"ATOMIC", 1, 2, 0);
+	trans[0][1]	= settr(0,4,6,67,67,"((((((dirR1==1)&&(lieuR1==1))&&(portesR1==refermees))&&(((posR2!=posR1)||(lieuR2!=0))||(dirR1!=dirR2)))&&(posR1<=NS)))", 1, 2, 0); /* m: 2 -> 6,0 */
 	reached0[2] = 1;
-	trans[0][2]	= settr(0,0,0,0,0,"posR1 = (posR1+1)",0,0,0);
-	trans[0][4]	= settr(3,0,21,1,0,"(1)", 0, 2, 0);
-	T = trans[ 0][7] = settr(6,2,0,0,0,"ATOMIC", 0, 2, 0);
-	T->nxt	= settr(6,2,5,0,0,"ATOMIC", 0, 2, 0);
-	trans[0][5]	= settr(4,4,8,55,55,"((((dirR1==-(1))&&((posR2!=(posR1-1))||(dirR1!=dirR2)))&&(posR1>1)))", 0, 2, 0); /* m: 6 -> 8,0 */
-	reached0[6] = 1;
-	trans[0][6]	= settr(0,0,0,0,0,"posR1 = (posR1-1)",0,0,0);
-	trans[0][8]	= settr(7,0,21,1,0,"(1)", 0, 2, 0);
-	T = trans[ 0][11] = settr(10,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(10,2,9,0,0,"ATOMIC", 1, 2, 0);
-	trans[0][9]	= settr(8,0,21,56,56,"((((dirR1==1)&&(posR1==NS))&&((posR2!=posR1)||(dirR2!=-(1)))))", 1, 2, 0); /* m: 10 -> 21,0 */
-	reached0[10] = 1;
-	trans[0][10]	= settr(0,0,0,0,0,"dirR1 = -(1)",0,0,0);
-	T = trans[ 0][14] = settr(13,2,0,0,0,"ATOMIC", 0, 2, 0);
-	T->nxt	= settr(13,2,12,0,0,"ATOMIC", 0, 2, 0);
-	trans[0][12]	= settr(11,0,21,57,57,"((((dirR1==-(1))&&(posR1==1))&&((posR2!=posR1)||(dirR2!=1))))", 0, 2, 0); /* m: 13 -> 21,0 */
-	reached0[13] = 1;
-	trans[0][13]	= settr(0,0,0,0,0,"dirR1 = 1",0,0,0);
-	T = trans[ 0][17] = settr(16,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(16,2,15,0,0,"ATOMIC", 1, 4, 506);
-	trans[0][15]	= settr(14,2,16,58,58,"ReqR2!1", 1, 4, 506);
-	trans[0][16]	= settr(15,0,21,59,59,"R2ToR1?posR2,dirR2", 1, 4, 506);
-	T = trans[ 0][20] = settr(19,2,0,0,0,"ATOMIC", 1, 2, 0);
-	T->nxt	= settr(19,2,18,0,0,"ATOMIC", 1, 503, 5);
-	trans[0][18]	= settr(17,2,19,60,60,"ReqR1?1", 1, 503, 5);
-	trans[0][19]	= settr(18,0,21,61,61,"R1ToR2!posR1,dirR1", 1, 503, 5);
-	trans[0][23]	= settr(22,0,24,1,0,"break", 0, 2, 0);
-	trans[0][24]	= settr(23,0,0,62,62,"-end-", 0, 3500, 0);
+	trans[0][2]	= settr(0,0,0,0,0,"portesR1 = fermees",0,0,0);
+	trans[0][3]	= settr(0,0,0,0,0,"posR1 = posR1",0,0,0);
+	trans[0][4]	= settr(0,0,0,0,0,"lieuR1 = 0",0,0,0);
+	trans[0][6]	= settr(5,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 0][11] = settr(10,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(10,2,7,0,0,"ATOMIC", 0, 2, 0);
+	trans[0][7]	= settr(6,4,12,68,68,"((((((dirR1==-(1))&&(lieuR1==1))&&(portesR1==refermees))&&(((posR2!=(posR1-1))||(lieuR2!=0))||(dirR1!=dirR2)))&&(posR1>1)))", 0, 2, 0); /* m: 8 -> 12,0 */
+	reached0[8] = 1;
+	trans[0][8]	= settr(0,0,0,0,0,"portesR1 = fermees",0,0,0);
+	trans[0][9]	= settr(0,0,0,0,0,"posR1 = (posR1-1)",0,0,0);
+	trans[0][10]	= settr(0,0,0,0,0,"lieuR1 = 0",0,0,0);
+	trans[0][12]	= settr(11,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 0][16] = settr(15,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(15,2,13,0,0,"ATOMIC", 1, 2, 0);
+	trans[0][13]	= settr(12,4,17,69,69,"(((((dirR1==1)&&(lieuR1==0))&&(((posR2!=(posR1+1))||(lieuR2!=1))||(dirR1!=dirR2)))&&(posR1<NS)))", 1, 2, 0); /* m: 14 -> 17,0 */
+	reached0[14] = 1;
+	trans[0][14]	= settr(0,0,0,0,0,"posR1 = (posR1+1)",0,0,0);
+	trans[0][15]	= settr(0,0,0,0,0,"lieuR1 = 1",0,0,0);
+	trans[0][17]	= settr(16,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 0][21] = settr(20,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(20,2,18,0,0,"ATOMIC", 0, 2, 0);
+	trans[0][18]	= settr(17,4,22,70,70,"(((((dirR1==-(1))&&(lieuR1==0))&&(((posR2!=posR1)||(lieuR2!=1))||(dirR1!=dirR2)))&&(posR1>=1)))", 0, 2, 0); /* m: 19 -> 22,0 */
+	reached0[19] = 1;
+	trans[0][19]	= settr(0,0,0,0,0,"posR1 = posR1",0,0,0);
+	trans[0][20]	= settr(0,0,0,0,0,"lieuR1 = 1",0,0,0);
+	trans[0][22]	= settr(21,0,41,1,0,"(1)", 0, 2, 0);
+	T = trans[ 0][25] = settr(24,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(24,2,23,0,0,"ATOMIC", 0, 2, 0);
+	trans[0][23]	= settr(22,0,41,71,71,"(((portesR1==fermees)&&(lieuR1==1)))", 0, 2, 0); /* m: 24 -> 41,0 */
+	reached0[24] = 1;
+	trans[0][24]	= settr(0,0,0,0,0,"portesR1 = ouvertes",0,0,0);
+	T = trans[ 0][28] = settr(27,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(27,2,26,0,0,"ATOMIC", 0, 2, 0);
+	trans[0][26]	= settr(25,0,41,72,72,"((portesR1==ouvertes))", 0, 2, 0); /* m: 27 -> 41,0 */
+	reached0[27] = 1;
+	trans[0][27]	= settr(0,0,0,0,0,"portesR1 = refermees",0,0,0);
+	T = trans[ 0][31] = settr(30,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(30,2,29,0,0,"ATOMIC", 1, 2, 0);
+	trans[0][29]	= settr(28,0,41,73,73,"(((((dirR1==1)&&(posR1==NS))&&(lieuR1==1))&&((posR2!=posR1)||(dirR2!=-(1)))))", 1, 2, 0); /* m: 30 -> 41,0 */
+	reached0[30] = 1;
+	trans[0][30]	= settr(0,0,0,0,0,"dirR1 = -(1)",0,0,0);
+	T = trans[ 0][34] = settr(33,2,0,0,0,"ATOMIC", 0, 2, 0);
+	T->nxt	= settr(33,2,32,0,0,"ATOMIC", 0, 2, 0);
+	trans[0][32]	= settr(31,0,41,74,74,"(((((dirR1==-(1))&&(posR1==1))&&(lieuR1==1))&&((posR2!=posR1)||(dirR2!=1))))", 0, 2, 0); /* m: 33 -> 41,0 */
+	reached0[33] = 1;
+	trans[0][33]	= settr(0,0,0,0,0,"dirR1 = 1",0,0,0);
+	T = trans[ 0][37] = settr(36,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(36,2,35,0,0,"ATOMIC", 1, 4, 506);
+	trans[0][35]	= settr(34,2,36,75,75,"ReqR2!1", 1, 4, 506);
+	trans[0][36]	= settr(35,0,41,76,76,"R2ToR1?posR2,dirR2,lieuR2", 1, 4, 506);
+	T = trans[ 0][40] = settr(39,2,0,0,0,"ATOMIC", 1, 2, 0);
+	T->nxt	= settr(39,2,38,0,0,"ATOMIC", 1, 503, 5);
+	trans[0][38]	= settr(37,2,39,77,77,"ReqR1?1", 1, 503, 5);
+	trans[0][39]	= settr(38,0,41,78,78,"R1ToR2!posR1,dirR1,lieuR1", 1, 503, 5);
+	trans[0][43]	= settr(42,0,44,1,0,"break", 0, 2, 0);
+	trans[0][44]	= settr(43,0,0,79,79,"-end-", 0, 3500, 0);
 	/* np_ demon: */
 	trans[_NP_] = (Trans **) emalloc(2*sizeof(Trans *));
 	T = trans[_NP_][0] = settr(9997,0,1,_T5,0,"(np_)", 1,2,0);

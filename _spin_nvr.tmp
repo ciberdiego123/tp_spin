@@ -1,3 +1,12 @@
+never pp {    /* !([] ((Rame1:posR1>=1))) */
+T0_init:
+	do
+	:: atomic { (! (((Rame1:posR1>=1)))) -> assert(!(! (((Rame1:posR1>=1))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
 never p0 {    /* !([] (((Rame1:posR1!=Rame2:posR2)) || ((Rame1:dirR1!=Rame2:dirR2)))) */
 T0_init:
 	do
@@ -106,5 +115,30 @@ accept_S17:
 accept_S22:
 	do
 	:: (! ((((Rame1:dirR1==1)) || ((Rame1:dirR1==-(1)))))) -> goto accept_S22
+	od;
+}
+never p7 {    /* !(([] ((! ((Rame1:lieuR1==0))) || ((Rame1:portesR1==fermees)))) && ([] ((! ((Rame2:lieuR2==0))) || ((Rame2:portesR2==fermees))))) */
+T0_init:
+	do
+	:: atomic { (((! (((! ((Rame1:lieuR1==0))) || ((Rame1:portesR1==fermees))))) || (! (((! ((Rame2:lieuR2==0))) || ((Rame2:portesR2==fermees))))))) -> assert(!(((! (((! ((Rame1:lieuR1==0))) || ((Rame1:portesR1==fermees))))) || (! (((! ((Rame2:lieuR2==0))) || ((Rame2:portesR2==fermees)))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never p8 {    /* !(([] ((! (((Rame1:lieuR1==1)) && ((Rame1:portesR1==fermees)))) || (<> ((Rame1:portesR1==ouvertes))))) && ([] ((! (((Rame2:lieuR2==1)) && ((Rame2:portesR2==fermees)))) || (<> ((Rame2:portesR2==ouvertes)))))) */
+T0_init:
+	do
+	:: (! ((! (((Rame2:lieuR2==1)) && ((Rame2:portesR2==fermees))))) && ! (((Rame2:portesR2==ouvertes)))) -> goto accept_S5
+	:: (! ((! (((Rame1:lieuR1==1)) && ((Rame1:portesR1==fermees))))) && ! (((Rame1:portesR1==ouvertes)))) -> goto accept_S10
+	:: (1) -> goto T0_init
+	od;
+accept_S5:
+	do
+	:: (! (((Rame2:portesR2==ouvertes)))) -> goto accept_S5
+	od;
+accept_S10:
+	do
+	:: (! (((Rame1:portesR1==ouvertes)))) -> goto accept_S10
 	od;
 }

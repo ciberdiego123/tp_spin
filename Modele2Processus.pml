@@ -31,16 +31,16 @@ proctype Rame1(){
 	/* Requete de donnees */
 	:: atomic{
 			/*Partie pour verifier si le depart est possible*/
-			((dirR1==1 && (posR2==posR1+1  && dirR1 == dirR2))	||
-			(dirR1==-1 && (posR2==posR1-1  && dirR1 == dirR2)) ||
+			(((dirR1==1 && posR2==posR1+1  && dirR1 == dirR2)	||
+			(dirR1==-1 && posR2==posR1-1  && dirR1 == dirR2) ||
 			/*Partie pour verifier si le changement de direction est possible*/
-			(dirR1==1 && posR1==NS && (posR2==posR1  && dirR2 == -1)) ||
-			(dirR1==-1 && posR1==1 && (posR2==posR1  && dirR2 == 1))) &&
-			empty(ReqR1)
+			(dirR1==1 && posR1==NS && posR2==posR1  && dirR2 == -1) ||
+			(dirR1==-1 && posR1==1 && posR2==posR1  && dirR2 == 1)) &&
+			empty(ReqR1))
 			-> ReqR2!1; R2ToR1?posR2,dirR2;}
 	
 	/* Reponse a la requete*/
-	:: atomic{full(ReqR1) -> ReqR1?1; R1ToR2!posR1,dirR1;}
+	:: atomic{full(ReqR1) -> ReqR1?1; R1ToR2!posR1,dirR1;} progress8:skip;
 	
 	od;
 }
@@ -69,16 +69,16 @@ proctype Rame2(){
 	/* Requete de donnees */
 	:: atomic{
 			/*Partie pour verifier si le depart est possible*/
-			((dirR2==1 && (posR1==posR2+1  && dirR1 == dirR2))	|| 
-			(dirR2==-1 && (posR1==posR2-1  && dirR1 == dirR2)) ||
+			(((dirR2==1 && posR1==posR2+1  && dirR1 == dirR2)	|| 
+			(dirR2==-1 && posR1==posR2-1  && dirR1 == dirR2) ||
 			/*Partie pour verifier si le changement de direction est possible*/
-			(dirR2==1 && posR2==NS && (posR2==posR1  && dirR1 == -1)) ||
-			(dirR2==-1 && posR2==1 && (posR2==posR1  && dirR1 == 1))) &&
-			empty(ReqR2)
+			(dirR2==1 && posR2==NS && posR2==posR1  && dirR1 == -1) ||
+			(dirR2==-1 && posR2==1 && posR2==posR1  && dirR1 == 1)) &&
+			empty(ReqR2))
 			-> ReqR1!1; R1ToR2?posR1,dirR1;} 
 	
 	/* Reponse a la requete*/
-	:: atomic{full(ReqR2) -> ReqR2?1; R2ToR1!posR2,dirR2;}
+	:: atomic{full(ReqR2) -> ReqR2?1; R2ToR1!posR2,dirR2;} progress9:skip;
 	
 	od;
 }
@@ -90,7 +90,8 @@ init {
 	}
 }
 
-ltl p0 {[]((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2))};
+ltl p0 {[]((Rame1:posR1!=0 && Rame2:posR2!=0 && Rame1:dirR1!=0 && Rame2:dirR2!=0)
+		-> ((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2)))};
 
 ltl p3 {[](Rame1:posR1 != 1 && Rame1:dirR1 == -1 -> (Rame1:dirR1 == -1 U (Rame1:posR1 == 1 && Rame1:dirR1 == 1))) &&
 		[](Rame2:posR2 != 1 && Rame2:dirR2 == -1 -> (Rame2:dirR2 == -1 U (Rame2:posR2 == 1 && Rame2:dirR2 == 1))) &&

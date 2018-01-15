@@ -63,7 +63,7 @@ proctype Rame1(){
 			-> ReqR2!1; R2ToR1?posR2,dirR2,lieuR2;}
 	
 	/* Reponse a la requete*/
-	:: atomic{full(ReqR1) -> ReqR1?1; R1ToR2!posR1,dirR1,lieuR1;}
+	:: atomic{full(ReqR1) -> ReqR1?1; R1ToR2!posR1,dirR1,lieuR1;} progress12 : skip;
 	
 	od;
 }
@@ -100,7 +100,7 @@ proctype Rame2(){
 	:: atomic{portesR2 == fermees && lieuR2 == 0 -> portesR2 = ouvertes;}
 	
 	/* FermeturePorte */
-	:: atomic{portesR2 == ouvertes -> portesR2 = refermees;}
+	:: atomic{portesR2 == ouvertes -> portesR2 = refermees;} 
 		
 	/* Changement Direction */
 	:: atomic{dirR2==1 && posR2==NS && lieuR2==0 && (posR2!=posR1  || dirR1 != -1)
@@ -123,7 +123,7 @@ proctype Rame2(){
 			-> ReqR1!1; R1ToR2?posR1,dirR1,lieuR1;} 
 	
 	/* Reponse a la requete*/
-	:: atomic{full(ReqR2) -> ReqR2?1; R2ToR1!posR2,dirR2,lieuR2;}
+	:: atomic{full(ReqR2) -> ReqR2?1; R2ToR1!posR2,dirR2,lieuR2;} progress13 : skip;
 	
 	od;
 }
@@ -135,7 +135,8 @@ init {
 	}
 }
 
-ltl p0 {[]((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2))};
+ltl p0 {[]((Rame1:posR1!=0 && Rame2:posR2!=0 && Rame1:dirR1!=0 && Rame2:dirR2!=0)
+		-> ((Rame1:posR1 != Rame2:posR2) || (Rame1:dirR1 != Rame2:dirR2) || (Rame1:lieuR1 != Rame2:lieuR2)))};
 
 ltl p3 {[](Rame1:posR1 != 1 && Rame1:dirR1 == -1 -> (Rame1:dirR1 == -1 U (Rame1:posR1 == 1 && Rame1:dirR1 == 1))) &&
 		[](Rame2:posR2 != 1 && Rame2:dirR2 == -1 -> (Rame2:dirR2 == -1 U (Rame2:posR2 == 1 && Rame2:dirR2 == 1))) &&

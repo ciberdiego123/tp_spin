@@ -29,8 +29,11 @@ proctype Rame1(){
 			-> dirR1 = 1;} progress3 : skip
 					
 	/* Requete de donnees */
-	:: atomic{((dirR1==1 && (posR2==posR1+1  && dirR1 == dirR2))	||
+	:: atomic{
+			/*Partie pour verifier si le depart est possible*/
+			((dirR1==1 && (posR2==posR1+1  && dirR1 == dirR2))	||
 			(dirR1==-1 && (posR2==posR1-1  && dirR1 == dirR2)) ||
+			/*Partie pour verifier si le changement de direction est possible*/
 			(dirR1==1 && posR1==NS && (posR2==posR1  && dirR2 == -1)) ||
 			(dirR1==-1 && posR1==1 && (posR2==posR1  && dirR2 == 1))) &&
 			empty(ReqR1)
@@ -64,8 +67,11 @@ proctype Rame2(){
 			-> dirR2 = 1;} progress7 : skip;
 			
 	/* Requete de donnees */
-	:: atomic{((dirR2==1 && (posR1==posR2+1  && dirR1 == dirR2))	|| 
+	:: atomic{
+			/*Partie pour verifier si le depart est possible*/
+			((dirR2==1 && (posR1==posR2+1  && dirR1 == dirR2))	|| 
 			(dirR2==-1 && (posR1==posR2-1  && dirR1 == dirR2)) ||
+			/*Partie pour verifier si le changement de direction est possible*/
 			(dirR2==1 && posR2==NS && (posR2==posR1  && dirR1 == -1)) ||
 			(dirR2==-1 && posR2==1 && (posR2==posR1  && dirR1 == 1))) &&
 			empty(ReqR2)

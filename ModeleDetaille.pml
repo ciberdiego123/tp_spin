@@ -1,5 +1,5 @@
 /* Ligne 14 avec 2 processus et plus de details (Troncons et portes) */
-int NS = 8; /* Stations */
+int NS = 2; /* Stations */
 int NT = NS - 1; /* Troncons */
 mtype = {fermees , ouvertes, refermees}; /** Etat des portes **/
 
@@ -25,15 +25,15 @@ proctype Rame1(){
 	/* Rame 1 */
 	/* Progress au moment d'avancer*/
 	/* Depart Station Suivante */
-	:: atomic{dirR1==1 && lieuR1==0 && portesR1==refermees && (posR2!=posR1 || lieuR2 !=0  || dirR1 != dirR2) && posR1<=NS 
+	:: atomic{dirR1==1 && lieuR1==0 && portesR1==refermees && (posR2!=posR1 || lieuR2 !=1  || dirR1 != dirR2) && posR1<=NS 
 		-> portesR1=fermees; posR1 = posR1; lieuR1 = 1;} progress0 : skip /* Direction Est */
-	:: atomic{dirR1==-1 && lieuR1==0 && portesR1==refermees &&(posR2!=posR1-1 || lieuR2 !=0  || dirR1 != dirR2) && posR1>1
+	:: atomic{dirR1==-1 && lieuR1==0 && portesR1==refermees &&(posR2!=posR1-1 || lieuR2 !=1  || dirR1 != dirR2) && posR1>1
 		-> portesR1=fermees; posR1 = posR1 - 1; lieuR1 = 1;} progress1 : skip /* Direction Ouest */
 		
 	/* Arrivee Station Suivante */
-	:: atomic{dirR1==1 && lieuR1==1 && (posR2!=posR1+1 || lieuR2 !=1  || dirR1 != dirR2) && posR1<NS 
+	:: atomic{dirR1==1 && lieuR1==1 && (posR2!=posR1+1 || lieuR2 !=0  || dirR1 != dirR2) && posR1<NS 
 		-> posR1 = posR1 + 1; lieuR1 = 0;} progress2 : skip /* Direction Est */
-	:: atomic{dirR1==-1 && lieuR1==1 && (posR2!=posR1 || lieuR2 !=1  || dirR1 != dirR2) && posR1>=1
+	:: atomic{dirR1==-1 && lieuR1==1 && (posR2!=posR1 || lieuR2 !=0  || dirR1 != dirR2) && posR1>=1
 		-> posR1 = posR1; lieuR1 = 0;} progress3 : skip /* Direction Ouest */
 		
 	/* OuverturePorte */
@@ -49,11 +49,17 @@ proctype Rame1(){
 			-> dirR1 = 1;} progress5 : skip /* Ouest -> Est */
 			
 	/* Requete de donnees */
-	:: atomic{((dirR1==1 && (posR2==posR1+1  && dirR1 == dirR2))	||
-			(dirR1==-1 && (posR2==posR1-1  && dirR1 == dirR2)) ||
-			(dirR1==1 && posR1==NS && (posR2==posR1  && dirR2 == -1)) ||
-			(dirR1==-1 && posR1==1 && (posR2==posR1  && dirR2 == 1))) &&
-			empty(ReqR1)
+	:: atomic{
+			/*Partie pour verifier si le depart est possible*/
+			((dirR1==1 && lieuR1==0 && (posR2==posR1  && lieuR2==1 && dirR1 == dirR2))	|| 
+			(dirR1==-1 && lieuR1==0 && (posR2==posR1-1 && lieuR2==1 && dirR1 == dirR2)) ||
+			/*Partie pour verifier si l'arrivee est possible*/
+			(dirR1==1 && lieuR1==1 && (posR2==posR1+1 && lieuR2==0 && dirR1 == dirR2)) ||
+			(dirR1==-1 && lieuR1==1 && (posR2==posR1 && lieuR2==0 && dirR1 == dirR2)) ||
+			/*Partie pour verifier si le changement de direction est possible*/
+			(dirR1==1 && posR1==NS && lieuR1==0 && (posR2==posR1  && dirR1 == -1)) ||
+			(dirR1==-1 && posR1==1 && lieuR1==0 && (posR2==posR1  && dirR1 == 1))) &&	
+			empty(ReqR1)		
 			-> ReqR2!1; R2ToR1?posR2,dirR2,lieuR2;}
 	
 	/* Reponse a la requete*/
@@ -78,15 +84,15 @@ proctype Rame2(){
 	/* Progress au moment d'avancer*/
 
 	/* Depart Station Suivante */
-	:: atomic{dirR2==1 && lieuR2==0 && portesR2==refermees && (posR1!=posR2 || lieuR1 !=0  || dirR1 != dirR2) && posR2<=NS 
+	:: atomic{dirR2==1 && lieuR2==0 && portesR2==refermees && (posR1!=posR2 || lieuR1 !=1  || dirR1 != dirR2) && posR2<=NS 
 		-> portesR2=fermees; posR2 = posR2; lieuR2 = 1;} progress6 : skip /* Direction Est */
-	:: atomic{dirR2==-1 && lieuR1==0 && portesR2==refermees && (posR2!=posR1-1 || lieuR1 !=0  || dirR1 != dirR2) && posR2>1
+	:: atomic{dirR2==-1 && lieuR2==0 && portesR2==refermees && (posR2!=posR1-1 || lieuR1 !=1  || dirR1 != dirR2) && posR2>1
 		-> portesR2=fermees; posR2 = posR2 - 1; lieuR2 = 1;} progress7 : skip /* Direction Ouest */
 		
 	/* Arrivee Station Suivante */
-	:: atomic{dirR2==1 && lieuR2==1 && (posR1!=posR2+1 || lieuR1 !=1  || dirR1 != dirR2) && posR2<NS 
+	:: atomic{dirR2==1 && lieuR2==1 && (posR1!=posR2+1 || lieuR1 !=0  || dirR1 != dirR2) && posR2<NS 
 		-> posR2 = posR2 + 1; lieuR2 = 0;} progress8 : skip /* Direction Est */
-	:: atomic{dirR2==-1 && lieuR2==1 && (posR1!=posR2 || lieuR1 !=1  || dirR1 != dirR2) && posR2>=1
+	:: atomic{dirR2==-1 && lieuR2==1 && (posR1!=posR2 || lieuR1 !=0  || dirR1 != dirR2) && posR2>=1
 		-> posR2 = posR2; lieuR2 = 0;} progress9 : skip /* Direction Ouest */
 			
 		
@@ -103,10 +109,16 @@ proctype Rame2(){
 			-> dirR2 = 1;} progress11 : skip /* Ouest -> Est */
 			
 	/* Requete de donnees */
-	:: atomic{((dirR2==1 && (posR1==posR2+1  && dirR1 == dirR2))	|| 
-			(dirR2==-1 && (posR1==posR2-1  && dirR1 == dirR2)) ||
-			(dirR2==1 && posR2==NS && (posR2==posR1  && dirR1 == -1)) ||
-			(dirR2==-1 && posR2==1 && (posR2==posR1  && dirR1 == 1))) &&
+	:: atomic{
+			/*Partie pour verifier si le depart est possible*/
+			((dirR2==1 && lieuR2==0 && (posR1==posR2  && lieuR1==1 && dirR1 == dirR2))	|| 
+			(dirR2==-1 && lieuR2==0 && (posR1==posR2-1 && lieuR1==1 && dirR1 == dirR2)) ||
+			/*Partie pour verifier si l'arrivee est possible*/
+			(dirR2==1 && lieuR2==1 && (posR1==posR2+1 && lieuR1==0 && dirR1 == dirR2)) ||
+			(dirR2==-1 && lieuR2==1 && (posR1==posR2 && lieuR1==0 && dirR1 == dirR2)) ||
+			/*Partie pour verifier si le changement de direction est possible*/
+			(dirR2==1 && posR2==NS && lieuR2==0 && (posR2==posR1  && dirR1 == -1)) ||
+			(dirR2==-1 && posR2==1 && lieuR2==0 && (posR2==posR1  && dirR1 == 1))) &&
 			empty(ReqR2)
 			-> ReqR1!1; R1ToR2?posR1,dirR1,lieuR1;} 
 	
